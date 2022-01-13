@@ -1,0 +1,17 @@
+.review-list {
+  border: 1px solid var(--clr_grey);
+  padding: 25px;
+  border-radius: 20px 0 20px 0;
+  margin: 0 0 25px;
+}
+
+.review-list h2 {
+  font-family: var(--secondary_font);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 20px;
+  padding: 0 0 20px;
+  border-bottom: 1px solid var(--clr_grey);
+  color: var(--clr_jaffa);
+}

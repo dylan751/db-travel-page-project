@@ -1,0 +1,35 @@
+.featured-tour {
+  margin: 100px auto;
+  width: 97%;
+  font-family: var(--secondary_font);
+}
+
+.featured-tour span {
+  color: var(--clr_jaffa);
+  position: relative;
+  line-height: 1.5;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.featured-tour h2 {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+  color: var(--clr_thunder);
+}
+
+.featured-tour-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.carousel {
+  width: 80%;
+  margin: 0 auto;
+  height: auto;
+}

@@ -1,0 +1,18 @@
+.product-list-item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.product-list .product-filter button {
+    background-color: var(--clr_jaffa);
+    color: var(--clr_white);
+    padding: 0.75rem 1rem;
+    border: 1px solid transparent;
+}
+
+.product-list .product-filter .product-filter-select {
+    position: relative;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--clr_grey);
+    margin: 1rem 0.5rem 1rem 0;
+}

@@ -1,0 +1,28 @@
+.destination-detail-item {
+    margin-bottom: 100px;
+    font-family: var(--secondary_font);
+}
+
+.destination-detail-item:last-of-type {
+    margin-bottom: 0px;
+}
+
+.destination-detail-item h1 {
+    color: var(--clr_jaffa);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.destination-detail-item p {
+    color: var(--clr_scorpion);
+    line-height: 26px;
+}
+
+.destination-detail-item .destination-address {
+    font-size: 1.25rem;
+}
+
+
+.destination-detail-item .image img {
+    object-fit: cover;
+}

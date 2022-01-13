@@ -1,0 +1,33 @@
+.hero-image {
+  top: 4rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/images/hero-image-2.jpg");
+  height: 700px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  font-family: var(--secondary_font);
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  color: white;
+}
+
+.hero-text span {
+  color: var(--clr_jaffa);
+}
+
+.hero-text h1 {
+  font-weight: 700;
+  font-size: 3.75rem;
+  line-height: 1.2;
+  margin: 0 0 36px;
+  width: 80%;
+  margin: 0 auto;
+}

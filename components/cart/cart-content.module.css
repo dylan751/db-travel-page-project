@@ -1,0 +1,14 @@
+.cart-content {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+}
+
+.cart-content__list {
+    flex: 2;
+}
+
+.cart-content__bill {
+    flex: 1;
+}

@@ -1,0 +1,72 @@
+.new-review h2 {
+  background: var(--clr_heath);
+  padding: 20px;
+  margin: 0 0 25px;
+  font-size: 1.75rem;
+  line-height: 26px;
+  font-weight: 700;
+  font-family: var(--secondary_font);
+  color: var(--clr_jaffa);
+}
+
+.new-review-form input:nth-of-type(1) {
+  border-radius: 15px 0 0 0;
+  height: 60px;
+  width: 100%;
+  border: 1px solid var(--clr_grey);
+  padding: 10px 20px;
+}
+
+.new-review-form input:nth-of-type(2) {
+  border-radius: 0 0 0 15px;
+  height: 60px;
+  width: 100%;
+  border: 1px solid var(--clr_grey);
+  padding: 10px 20px;
+}
+
+.new-review-form input:focus {
+    border: 1px solid var(--clr_grey);
+}
+
+.new-review-form-controls {
+  display: flex;
+  gap: 16px;
+}
+
+.new-review-form-control {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.new-review-form-controls textarea {
+  flex: 1;
+  width: 100%;
+  border: 1px solid var(--clr_grey);
+  padding: 10px 20px;
+  height: 135px;
+  resize: none;
+  border-radius: 0 15px 15px 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.new-review button {
+    margin: 20px 0 0;
+    background-color: var(--clr_jaffa);
+    border: none;
+    color: var(--clr_white);
+    padding: 10px 35px;
+    border-radius: 0 0 20px 0;   
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.new-review button:hover {
+    border-radius: 0 20px;
+}

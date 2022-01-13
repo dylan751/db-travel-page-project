@@ -1,0 +1,29 @@
+.product-section {
+  margin: 100px auto;
+  width: 90%;
+  font-family: var(--secondary_font);
+}
+
+.product-section .product-section-header {
+    /* text-align: center; */
+    display: flex;
+    margin-bottom: 1.5rem;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.product-section .product-section-header span {
+  color: var(--clr_jaffa);
+  position: relative;
+  line-height: 1.5;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.product-section .product-section-header h2 {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+  color: var(--clr_thunder);
+}

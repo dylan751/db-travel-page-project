@@ -1,0 +1,63 @@
+.item {
+  font-family: var(--secondary_font);
+  flex: 1;
+  /* border: 1px solid #f5f5f5; */
+  border-radius: 0 15px 0 15px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  margin: 12px;
+}
+
+.item a {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.item span {
+  font-weight: 400;
+}
+
+.item:hover {
+  background-color: var(--clr_jaffa);
+  color: white;
+}
+
+.content {
+  padding: 20px;
+}
+
+.content .content-header {
+  margin-bottom: 15px;
+}
+
+.content .content-header p {
+  margin: 10px 0;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.more-information {
+  display: flex;
+  justify-content: normal;
+  margin: 12px 0;
+}
+
+.more-information-item {
+  font-size: 0.9rem;
+  margin-right: 0.9rem;
+}
+
+.price {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  font-weight: 600;
+}
+
+.image img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+

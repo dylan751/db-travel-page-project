@@ -1,0 +1,18 @@
+.review-item {
+  margin: 0 0 20px;
+}
+
+.review-header {
+  line-height: 21px;
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--clr_thunder);
+}
+
+.review-content {
+  font-size: 1rem;
+  line-height: 24px;
+  margin: 0;
+  color: var(--clr_scorpion);
+}

@@ -1,0 +1,49 @@
+.footer {
+  margin-top: 100px;
+  background-color: #f9f9f9;
+}
+
+.footer .footer-container {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  padding: 100px 0;
+}
+
+.footer .footer-item {
+  flex: 1;
+}
+
+.footer .footer-item h4 {
+  line-height: 1.4;
+  margin: 0 0 20px;
+  color: var(--clr_thunder);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.footer .footer-link {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .footer-link .link {
+    color: var(--clr_scorpion);
+    padding-bottom: 10px;
+    font-weight: 400;
+}
+
+.footer .footer-item p {
+    color: var(--clr_scorpion);
+    padding-bottom: 10px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.footer .footer-item .sponsor-logo {
+  display: flex;
+}
+
+.footer .footer-item img {
+    margin: 15px 10px;
+}

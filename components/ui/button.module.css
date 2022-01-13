@@ -1,0 +1,19 @@
+.btn {
+  font-family: var(--primary_font);
+  font-size: 15px;
+  line-height: 26px;
+  font-weight: 500;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 10px 30px;
+  text-align: center;
+  background-color: white;
+  border: 1px solid black;
+  transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--clr_jaffa);
+    color: var(--clr_white);
+    border-color: var(--clr_jaffa);
+}

@@ -1,0 +1,4 @@
+.is-active {
+    color: var(--clr_jaffa);
+    text-decoration: underline;
+}

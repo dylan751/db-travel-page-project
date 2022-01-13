@@ -1,0 +1,47 @@
+.form {
+  background-color: var(--clr_heath);
+  /* background-color: #F3C677; */
+}
+
+.form-controls {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.form-controls h4 {
+  margin: 0 0 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--clr_thunder);
+  line-height: 1.4;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.form-control input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid var(--clr_grey);
+  border-radius: 0;
+  color: var(--clr_thunder);
+  background: var(--clr_white);
+  margin: 0 0 15px;
+  padding: 10px 15px;
+  line-height: 1.5;
+}
+
+.form-controls button {
+  background: var(--clr_jaffa);
+  width: 100%;
+  display: block;
+  color: var(--clr_white);
+  border: none;
+  padding: 12px;
+  border-radius: 0 0 15px 0;
+  line-height: 1.5;
+  cursor: pointer;
+}

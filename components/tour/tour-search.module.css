@@ -1,0 +1,66 @@
+.tour-search {
+  font-family: var(--secondary_font);
+  display: block;
+  position: relative;
+  top: 4rem;
+  /* width: 90%; */
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding-top: 100px;
+}
+
+.tour-search h1 {
+  font-size: 3.125rem;  
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 70%;
+  padding-bottom: 100px;
+  margin-bottom: 150px;
+}
+
+.form .form-controls {
+  display: flex;
+  width: 100%;
+}
+
+.form .form-control {
+  /* padding: 10px; */
+  flex: 1;
+}
+
+.form .form-control select {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid rgb(213, 213, 213);
+  border-right: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.form .form-control option {
+  font-family: inherit;
+}
+
+.form button {
+  display: inline-block;
+  height: 53px;
+  margin: 0;
+  padding: 0 30px;
+  width: 210px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--clr_jaffa);
+  color: var(--clr_white);
+  font-family: inherit;
+  font-size: inherit;
+}
