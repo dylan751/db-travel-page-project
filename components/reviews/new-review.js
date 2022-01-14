@@ -4,6 +4,10 @@ import {ArrowSmRightIcon} from '@heroicons/react/solid';
 import { useRef, useContext } from "react";
 import NotificationContext from "../../store/notification-context";
 
+const dev = process.env.NODE_ENV !== 'production';
+
+export const server = dev ? 'http://localhost:3000' : 'https://db-travel-page-project.vercel.app';
+
 function NewReview(props) {
   const notificationCtx = useContext(NotificationContext);
   const { tourId } = props;
@@ -31,7 +35,7 @@ function NewReview(props) {
       status: "pending",
     });
 
-    fetch("http://localhost:3000/api/reviews/" + tourId, {
+    fetch(`${server}/api/reviews` + tourId, {
       method: "POST",
       body: JSON.stringify(commentData),
       headers: {

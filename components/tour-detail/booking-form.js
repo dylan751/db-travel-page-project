@@ -4,6 +4,10 @@ import {ArrowSmRightIcon} from '@heroicons/react/solid';
 import { useRef, useContext } from "react";
 import NotificationContext from "../../store/notification-context";
 
+const dev = process.env.NODE_ENV !== 'production';
+
+export const server = dev ? 'http://localhost:3000' : 'https://db-travel-page-project.vercel.app';
+
 function BookingForm(props) {
   const notificationCtx = useContext(NotificationContext);
   const { tourId } = props;
@@ -41,7 +45,7 @@ function BookingForm(props) {
       status: "pending",
     });
 
-    fetch("http://localhost:3000/api/forms", {
+    fetch(`${server}/api/forms`, {
       method: "POST",
       body: JSON.stringify(newForm),
       headers: {

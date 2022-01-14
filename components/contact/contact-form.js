@@ -3,6 +3,10 @@ import classes from "./contact-form.module.css";
 import { useRef, useContext } from "react";
 import NotificationContext from "../../store/notification-context";
 
+const dev = process.env.NODE_ENV !== 'production';
+
+export const server = dev ? 'http://localhost:3000' : 'https://db-travel-page-project.vercel.app';
+
 function ContactForm() {
   const notificationCtx = useContext(NotificationContext);
 
@@ -35,7 +39,7 @@ function ContactForm() {
       status: "pending",
     });
 
-    fetch("http://localhost:3000/api/contacts", {
+    fetch(`${server}/api/contacts`, {
       method: "POST",
       body: JSON.stringify(newContact),
       headers: {
