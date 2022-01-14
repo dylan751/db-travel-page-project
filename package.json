@@ -16,7 +16,8 @@
     "react-elastic-carousel": "^0.11.5",
     "react-responsive-carousel": "^3.2.22",
     "serverless-mysql": "^1.5.4",
-    "sharp": "^0.29.3"
+    "sharp": "^0.29.3",
+    "swr": "^1.1.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
