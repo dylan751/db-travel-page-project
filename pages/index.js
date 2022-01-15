@@ -28,7 +28,7 @@ function HomePage(props) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const featuredTours = await getFeaturedTours();
   const allProducts = await getAllProducts();
 
@@ -37,7 +37,7 @@ export async function getStaticProps() {
       featuredTours: featuredTours,
       allProducts: allProducts,
     },
-    revalidate: 1800,
+    // revalidate: 1800,
   };
 }
 
