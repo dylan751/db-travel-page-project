@@ -33,7 +33,7 @@ function CartBill() {
       <div className={classes["cart-bill-content"]}>
         <div className={classes["cart-bill-item-container"]}>
           {cart.map((item) => (
-            <div className={classes["cart-bill-item"]}>
+            <div className={classes["cart-bill-item"]} key={item.ProductID}>
               <h3>{item.TenSanPham}</h3>
               <p>
                 <i className="fas fa-dollar-sign"></i>
