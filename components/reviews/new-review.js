@@ -35,7 +35,7 @@ function NewReview(props) {
       status: "pending",
     });
 
-    fetch(`${server}/api/reviews` + tourId, {
+    fetch(`${server}/api/reviews/${tourId}`, {
       method: "POST",
       body: JSON.stringify(commentData),
       headers: {
