@@ -38,29 +38,12 @@ export async function getServerSideProps(context) {
 
 // export async function getStaticPaths() {
 //   // Get all tours
-//   // const allTours = await getAllTours();
+//   const allTours = await getAllTours();
 
-//   // const paths = allTours.map((tour) => ({ params: { tourId: tour.TourID } }));
+//   const paths = allTours.map((tour) => ({ params: { tourId: `${tour.TourID}` } }));
 
 //   return {
-//     paths: [
-//       { params: { tourId: "1" } },
-//       { params: { tourId: "2" } },
-//       { params: { tourId: "3" } },
-//       { params: { tourId: "4" } },
-//       { params: { tourId: "5" } },
-//       { params: { tourId: "6" } },
-//       { params: { tourId: "7" } },
-//       { params: { tourId: "8" } },
-//       { params: { tourId: "9" } },
-//       { params: { tourId: "10" } },
-//       { params: { tourId: "11" } },
-//       { params: { tourId: "12" } },
-//       { params: { tourId: "13" } },
-//       { params: { tourId: "14" } },
-//       { params: { tourId: "15" } },
-//       { params: { tourId: "16" } },
-//     ],
+//     paths: paths,
 //     fallback: true,
 //   };
 // }

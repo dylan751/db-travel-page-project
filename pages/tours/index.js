@@ -14,7 +14,7 @@ function AllToursPage(props) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps() {  
   const tours = await getAllTours();
   
   return {
