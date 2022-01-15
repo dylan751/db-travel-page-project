@@ -14,14 +14,14 @@ function AllToursPage(props) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {  
   const tours = await getAllTours();
   
   return {
     props: {
       tours: tours,
     },
-    // revalidate: 1800,
+    revalidate: 1800,
   };
 }
 

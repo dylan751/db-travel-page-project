@@ -15,14 +15,14 @@ function DestinationPage(props) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const allDestinations = await getAllDestinations();
 
   return {
     props: {
       destinations: allDestinations,
     },
-    // revalidate: 1800,
+    revalidate: 1800,
   };
 }
 
