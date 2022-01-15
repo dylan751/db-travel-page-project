@@ -13,14 +13,14 @@ function ShoppingPage(props) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const products = await getAllProducts();
 
   return {
     props: {
       products: products,
     },
-    revalidate: 1800,
+    // revalidate: 1800,
   };
 }
 
