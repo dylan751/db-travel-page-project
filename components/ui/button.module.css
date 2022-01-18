@@ -1,6 +1,6 @@
 .btn {
   font-family: var(--primary_font);
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 26px;
   font-weight: 500;
   display: inline-block;
@@ -16,4 +16,11 @@
     background-color: var(--clr_jaffa);
     color: var(--clr_white);
     border-color: var(--clr_jaffa);
+}
+
+@media screen and (max-width: 768px) {
+  .btn {
+    font-size: 0.75rem;
+    line-height: 26px;
+  }
 }

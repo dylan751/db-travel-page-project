@@ -25,6 +25,15 @@ function ContactForm() {
     const enteredSubject = subjectInputRef.current.value;
     const enteredMessage = messageInputRef.current.value;
 
+    if(enteredPhone.length > 11 || enteredPhone.length < 10) {
+      notificationCtx.showNotification({
+        title: "Số điện thoại chứa 10 hoặc 11 ký tự",
+        message: "Đặt vé không thành công!",
+        status: "error",
+      });
+      return;
+    }
+
     const newContact = {
       enteredName,
       enteredPhone,
@@ -101,7 +110,7 @@ function ContactForm() {
             placeholder="Nhắn nhủ yêu thương..."
             ref={messageInputRef}
           ></textarea>
-          <button>Send Message</button>
+          <button>Gửi Thông Tin</button>
         </div>
       </div>
     </form>

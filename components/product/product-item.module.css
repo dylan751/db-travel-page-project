@@ -54,3 +54,20 @@
   padding: 10px;
   border-radius: 6px;
 }
+
+@media screen and (max-width: 1024px) {
+  .product-item h2 {
+    font-size: 1.25rem;
+  }
+  .product-item .product-price p {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .product-item .product-description {
+    font-size: 0.8rem;
+  }
+  .product-item button {
+    font-size: 0.75rem;
+    width: 70%;
+  }
+}

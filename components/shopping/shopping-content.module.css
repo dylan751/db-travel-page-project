@@ -1,4 +1,16 @@
 .shopping-content {
-    width: 65%;
+    width: 70%;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .shopping-content {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .shopping-content {
+        width: 90%;
+    }
 }

@@ -22,6 +22,8 @@
 .item:hover {
   background-color: var(--clr_jaffa);
   color: white;
+  transform: translate(0, -0.4rem);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .content {
@@ -60,4 +62,12 @@
   height: 200px;
   object-fit: cover;
 }
+
+@media screen and (max-width: 1024px) {
+  .more-information-item {
+    font-size: 0.7rem;
+    margin-right: 0.75rem;
+  }
+}
+
 

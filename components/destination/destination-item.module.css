@@ -7,7 +7,8 @@
   overflow: hidden;
   border-radius: 20px;
   width: 100%;
-  height: 310px;
+  /* height: 310px; */
+  /* height: 100%; */
   object-fit: cover;
 }
 
@@ -15,14 +16,13 @@
   position: absolute;
   top: 0;
   left: 0;
-
   border-radius: 20px;
   width: 100%;
   height: 100%;
   display: flex;
   background-color: var(--clr_heath);
   opacity: 0;
-  transition: 0.5s; 
+  transition: 0.5s;
 }
 
 .content-container {
@@ -36,6 +36,8 @@
 
 .content:hover {
   opacity: 1;
+  transform: translate(0, -0.3rem);
+  /* box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3); */
 }
 
 .content a.name {
@@ -76,4 +78,17 @@
   color: #434343;
   font-size: 1rem;
   line-height: 26px;
+}
+
+@media screen and (max-width: 768px) {
+  .content a.name {
+    font-size: 1.25rem;
+  }
+  .content .tour-name {
+    font-size: 1rem;
+  }
+  .content p {
+    font-size: 0.75rem;
+    line-height: 20px;
+  }
 }

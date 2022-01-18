@@ -1,5 +1,8 @@
 .tour-search {
   font-family: var(--secondary_font);
+  background-image: url("../../public/images/hero-image/hero-image-4.jpg");
+  background-size: cover;
+  background-position: center;
   display: block;
   position: relative;
   top: 4rem;
@@ -45,6 +48,7 @@
   border-right: none;
   font-family: inherit;
   font-size: inherit;
+  background-color: var(--clr_white);
 }
 
 .form .form-control option {
@@ -63,4 +67,38 @@
   color: var(--clr_white);
   font-family: inherit;
   font-size: inherit;
+}
+
+@media screen and (max-width: 1024px) {
+  .tour-search h1 {
+    margin-bottom: 50px;
+  }
+  .form .form-control select {
+    font-size: 0.75rem;
+    padding: 16px 10px;
+  }
+  .form button {
+    display: inline-block;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tour-search h1 {
+    margin-bottom: 25px;
+    font-size: 2.75rem;
+  }
+  .form .form-control select {
+    font-size: 0.6rem;
+    padding: 10px 5px;
+  }
+  .form button {
+    height: 36px;
+    font-size: 0.75rem;
+    width: 110px;
+  }
 }

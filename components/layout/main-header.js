@@ -31,31 +31,6 @@ function MainHeader() {
           {menuItems.map((menu) => (
             <Menu key={menu.url} menu={menu} currentPath={router.pathname} />
           ))}
-          {/* <li>
-            <Link href="/">
-              <a>Trang chủ</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/tours">
-              <a>Các Tour</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/destination">
-              <a>Địa điểm giải trí</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/shopping">
-              <a>Cửa hàng</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact-us">
-              <a>Liên hệ</a>
-            </Link>
-          </li> */}
           <li className={classes["shopping-cart-icon"]}>
             <span>{ShoppingCartCtx.cart.length}</span>
             <Link href="/cart">

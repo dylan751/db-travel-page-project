@@ -18,7 +18,7 @@
 
 .about-us p {
   margin: 0;
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 26px;
   color: var(--clr_scorpion);
   font-weight: 400;
@@ -42,7 +42,7 @@
 
 .about-us .header h2 {
   color: var(--clr_thunder);
-  font-size: 35px;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 1.4;
   margin: 0;
@@ -109,8 +109,70 @@
 .review-item .review-content p {
   margin: 0;
   margin-bottom: 10px;
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 26px;
   color: var(--clr_scorpion);
   font-weight: 400;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-us {
+    gap: 0;
+  }
+  .about-us .header h2 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+  .about-us p {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+  .about-us .content h4 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+  .review-item .review-content h5 {
+    font-size: 1.5rem;
+    line-height: 1.1;
+  }
+  
+  .review-item .review-content p {
+    font-size: 0.75rem;
+    line-height: 1.6;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-us {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-us .header {
+    max-width: 100%;
+  }
+  .about-us .content {
+    max-width: 100%;
+  }
+  .about-us .header h2 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+  .about-us p {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+  .about-us .content h4 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+  .review-item .review-content h5 {
+    font-size: 1.5rem;
+    line-height: 1.1;
+  }
+  
+  .review-item .review-content p {
+    font-size: 0.75rem;
+    line-height: 1.6;
+  }
 }

@@ -1,47 +1,85 @@
 .contact-us {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    margin: 0 auto;
-    background-color: rgb(247, 247, 247);
-    padding: 100px;
-    font-family: var(--secondary_font);
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  background-color: rgb(247, 247, 247);
+  padding: 100px;
+  font-family: var(--secondary_font);
 }
 
 .contact-us .contact-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: var(--clr_white);
-    padding: 30px;
-    width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--clr_white);
+  padding: 30px;
+  width: 40%;
 }
 
 .contact-us .contact-container h3 {
-    font-size: 2rem;
-    line-height: 1.1;
-    font-weight: 700;
-    /* width: 70%; */
-    margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+  line-height: 1.1;
+  font-weight: 700;
+  /* width: 70%; */
+  margin: 0 0 0.5rem 0;
 }
 
 .contact-us .contact-container p {
-    font-size: 1rem;
-    line-height: 26px;
-    margin: 0 0 30px;
-    color: var(--clr_scorpion);
+  font-size: 1rem;
+  line-height: 26px;
+  margin: 0 0 30px;
+  color: var(--clr_scorpion);
 }
 
 .contact-us .contact-container a {
-    background-color: var(--clr_jaffa);
-    border: 1px solid transparent;
-    padding: 16px 15px;
+  background-color: var(--clr_jaffa);
+  border: 1px solid transparent;
+  padding: 16px 15px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--clr_white);
+  font-weight: 600;
+  font-family: inherit;
+  border-radius: 0 0 20px 0;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .contact-us .contact-container h3 {
+    font-size: 1.5rem;
+    /* width: 70%; */
+  }
+  .contact-us .contact-container p {
+    font-size: 0.75rem;
+    line-height: 20px;
+  }
+  .contact-us .contact-container a {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-us .contact-container h3 {
+    font-size: 1.75rem;
+    /* width: 70%; */
+  }
+  .contact-us {
+    flex-direction: column;
+    padding: 50px;
+  }
+  .contact-us .contact-container {
+      margin-top: 40px;
     width: 100%;
-    text-align: center;
-    font-size: 1.25rem;
-    color: var(--clr_white);
-    font-weight: 600;
-    font-family: inherit;
-    border-radius: 0 0 20px 0;
-    cursor: pointer;
+  }
+  .contact-us .contact-container p {
+    font-size: 1rem;
+    line-height: 20px;
+  }
+  .contact-us .contact-container a {
+    font-size: 1rem;
+    padding: 8px 10px;
+  }
 }

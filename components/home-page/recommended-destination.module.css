@@ -86,3 +86,43 @@
   font-weight: 600;
   color: var(--clr_jaffa);
 }
+
+@media screen and (max-width: 1024px) {
+  .recommended-destination-container .destination img {
+    height: 300px;
+  }
+
+  .recommended-destination-container .destination li {
+    height: 300px;
+  }
+  .recommended-destination-container .destination li .description {
+    height: 300px;
+  }
+  .recommended-destination-container .destination li .name {
+    font-size: 1rem;
+  }
+  .recommended-destination-container .destination li .explore {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .recommended-destination-container .destination img {
+    height: 250px;
+  }
+  .recommended-destination-container .destination li {
+    height: 250px;
+  }
+  .recommended-destination-container .destination li .description {
+    height: 250px;
+  }
+  .recommended-destination-container .destination li .name {
+    font-size: 0.8rem;
+  }
+  .recommended-destination-container .destination li .explore {
+    font-size: 0.6rem;
+  }
+  .recommended-destination-container .destination img {
+    border-radius: 12px;
+  }
+}

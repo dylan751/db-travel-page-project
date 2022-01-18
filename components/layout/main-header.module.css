@@ -54,3 +54,16 @@
   border-radius: 60%;
   z-index: -1;
 }
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 1rem 5%;
+  }
+  .navigation ul li {
+    margin: 10px 15px;
+  }
+  .navigation ul li a {
+    font-weight: 700;
+    font-size: 0.75rem;
+  }
+}

@@ -11,9 +11,6 @@ function Services() {
           <span>Tất cả</span>
           <h2>Dịch vụ của chúng tôi</h2>
         </div>
-        <div>
-          <Button link="/tours">Dịch vụ</Button>
-        </div>
       </div>
       <div className={classes["services-content"]}>
         <div className={classes["services-item"]}>

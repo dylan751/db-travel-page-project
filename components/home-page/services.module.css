@@ -45,15 +45,15 @@
   padding: 20px;
   border-radius: 0 15px 0 15px;
   left: 10px;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .services .services-content h2 {
   margin: 20px 0 5px 0;
-  cursor: pointer;
   transition: 0.3s;
   font-weight: 700;
   font-size: 1rem;
+  cursor: default;
 }
 
 .services .services-content h2:hover {
@@ -66,5 +66,12 @@
   line-height: 1.5;
   display: inline-block;
   font-weight: 600;
-  cursor: pointer;
+  /* cursor: pointer; */
+}
+
+@media screen and (max-width: 768px) {
+  .services .services-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

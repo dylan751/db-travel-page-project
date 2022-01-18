@@ -9,6 +9,23 @@ function CartList() {
   const ShoppingCartCtx = useContext(ShoppingCartContext);
   const cartItems = ShoppingCartCtx.cart;
 
+  if (cartItems.length === 0) {
+    return (
+      <Fragment>
+        <ul className={classes["cart-list"]}>
+          <li className={classes["cart-list-header"]}>
+            <p className={classes["cart-list-header__product"]}>Sản Phẩm</p>
+            <p>Đơn giá</p>
+            <p>Số lượng</p>
+            <p>Tổng tiền</p>
+            <p>Xóa</p>
+          </li>
+          <h2 className={classes["empty-cart-information"]}>Chưa có sản phẩm trong giỏ hàng</h2>
+        </ul>
+      </Fragment>
+    );
+  }
+
   return (
     <Fragment>
       {/* <ul className={classes["cart-list-header"]}></ul> */}

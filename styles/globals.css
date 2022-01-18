@@ -43,6 +43,7 @@ body {
   margin: 0;
   font-family: var(--primary_font);
   /* color: var(--clr_scorpion); */
+  /* overflow: scroll; */
 }
 
 ul {

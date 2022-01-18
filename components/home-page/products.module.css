@@ -5,11 +5,11 @@
 }
 
 .product-section .product-section-header {
-    /* text-align: center; */
-    display: flex;
-    margin-bottom: 1.5rem;
-    justify-content: space-between;
-    align-items: flex-end;
+  /* text-align: center; */
+  display: flex;
+  margin-bottom: 1.5rem;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .product-section .product-section-header span {
@@ -21,7 +21,7 @@
 }
 
 .product-section .product-section-header h2 {
-  font-size: 35px;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 1.4;
   margin: 0;

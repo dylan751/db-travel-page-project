@@ -1,8 +1,15 @@
 .destination-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+  .destination-list {
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.75rem;
-    width: 90%;
-    margin: 0 auto;
-    margin-bottom: 100px;
+  }
 }

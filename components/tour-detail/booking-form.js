@@ -29,6 +29,35 @@ function BookingForm(props) {
     const enteredFinishDate = finishDateRef.current.value; // YYYY-MM-DD
     const enteredNumberOfPeople = numberOfPeopleRef.current.value;
 
+    const currentDate = new Date().toISOString();
+
+    if(enteredStartDate > enteredFinishDate) {
+      notificationCtx.showNotification({
+        title: "Ngày khởi hành phải sau ngày kết thúc! Nhập lại!",
+        message: "Đặt vé không thành công!",
+        status: "error",
+      });
+      return;
+    }
+    // -------------------------------- Validate -------------------------------------
+    if(enteredStartDate <= currentDate) {
+      notificationCtx.showNotification({
+        title: "Không thể đặt Tour đã diễn ra!",
+        message: "Đặt vé không thành công!",
+        status: "error",
+      });
+      return;
+    }
+
+    if(enteredPhone.length > 11 || enteredPhone.length < 10) {
+      notificationCtx.showNotification({
+        title: "Số điện thoại chứa 10 hoặc 11 ký tự",
+        message: "Đặt vé không thành công!",
+        status: "error",
+      });
+      return;
+    }
+
     const newForm = {
       tourId,
       enteredName,
@@ -85,24 +114,29 @@ function BookingForm(props) {
           <input
             type="text"
             id="name"
-            placeholder="Họ và tên"
+            placeholder="Họ và tên*"
             ref={nameInputRef}
+            required
           />
         </div>
         <div className={classes["form-control"]}>
           <input
-            type="number"
+            type="tel"
             id="phone"
-            placeholder="Số điện thoại"
+            placeholder="Số điện thoại*"
+            // minLength={10}
+            // maxLength={11}
             ref={phoneInputRef}
+            required
           />
         </div>
         <div className={classes["form-control"]}>
           <input
             type="email"
             id="email"
-            placeholder="Địa chỉ email"
+            placeholder="Địa chỉ email*"
             ref={emailInputRef}
+            required
           />
         </div>
         <div className={classes["form-control"]}>
@@ -115,8 +149,9 @@ function BookingForm(props) {
           <input
             type="number"
             id="number-of-people"
-            placeholder="Số lượng người"
+            placeholder="Số lượng người*"
             ref={numberOfPeopleRef}
+            required
           />
         </div>
         <button>

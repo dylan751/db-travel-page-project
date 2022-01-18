@@ -11,7 +11,8 @@ function ContactUs() {
         <p>Quý vị hãy để lại thông tin liên lạc để nhận chăm sóc khách hàng</p>
         <Link href="/contact-us">
           <a>
-            Liên Hệ Thôi <ArrowSmRightIcon className="w-6 h-6 inline-block text-white" />
+            Liên Hệ Thôi{" "}
+            <ArrowSmRightIcon className="w-6 h-6 inline-block text-white" />
           </a>
         </Link>
       </div>
