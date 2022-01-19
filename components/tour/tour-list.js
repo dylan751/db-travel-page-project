@@ -17,6 +17,12 @@ function TourList(props) {
     setCurrentPage(page);
   }
 
+  if(tours.length === 0) {
+    return <Fragment>
+      <h2 className={classes["no-tour-inform"]}>Không tìm thấy Tour phù hợp</h2>
+    </Fragment>
+  }
+
   return (
     <Fragment>
       <ul className={classes.list}>

@@ -6,6 +6,14 @@
   width: 90%;
 }
 
+.no-tour-inform {
+  font-family: var(--secondary_font);
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--clr_jaffa);
+  font-weight: 600;
+}
+
 @media screen and (max-width: 1024px) {
   .list {
     display: grid;
