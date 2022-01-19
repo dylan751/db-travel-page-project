@@ -18,7 +18,7 @@
   right: -100px;
   width: 45%;
   background: #3f3a7f;
-  padding: 65px 80px;
+  padding: 4rem 5rem;
   border-radius: 0 0 0 20px;
 }
 
@@ -46,4 +46,26 @@
   font-weight: 700;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .single-tour-item {
+    background-position: center;
+    padding: 20rem;
+  }
+  .single-tour-info {
+    width: 60%;
+    padding: 4rem 1rem 4rem 5rem;
+  }
+  .single-tour-info p {
+    font-size: 1rem;
+    line-height: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .single-tour-info {
+    width: 75%;
+    padding: 4rem 1rem 4rem 5rem;
+  }
 }
