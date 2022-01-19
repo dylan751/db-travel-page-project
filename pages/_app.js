@@ -4,6 +4,7 @@ import Layout from "../components/layout/layout";
 import { NotificationContextProvider } from "../store/notification-context";
 import { ShoppingCartContextProvider } from "../store/shopping-cart-context";
 import "../styles/globals.css";
+import NextNProgress from "nextjs-progressbar";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -26,6 +27,7 @@ function MyApp({ Component, pageProps }) {
               content="initial-scale=1.0, width=device-width"
             />
           </Head>
+          <NextNProgress />
           <Component {...pageProps} />
         </Layout>
       </NotificationContextProvider>

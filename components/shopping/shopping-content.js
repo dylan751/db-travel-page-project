@@ -6,8 +6,6 @@ function ShoppingContent(props) {
   return (
     <section className={classes["shopping-content"]}>
       <div className={classes["product-section"]}>
-        {/* <ProductSearch /> */}
-        
         <ProductList products={products} />
       </div>
     </section>

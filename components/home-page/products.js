@@ -26,7 +26,7 @@ function Products(props) {
           <Button link="/shopping">Cửa Hàng</Button>
         </div>
       </div>
-      <Carousel breakPoints={breakPoints} enableAutoPlay autoPlaySpeed={4000}>
+      <Carousel breakPoints={breakPoints}>
         {products.map((product) => (
           <ProductItem
           key={product.ProductID}

@@ -7,6 +7,7 @@
   margin: 0 auto;
   background-color: #f9f9f9;
   padding-top: 100px;
+  color: var(--clr_jaffa);
 }
 
 .tour-header h1 {
