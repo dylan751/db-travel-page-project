@@ -10,6 +10,7 @@ import Services from "../components/home-page/services";
 import AboutUs from "../components/home-page/about-us";
 import ContactUs from "../components/home-page/contact-us";
 import Products from "../components/home-page/products";
+import HeroTour from "../components/home-page/hero-tour";
 
 function HomePage(props) {
   const { featuredTours, allProducts } = props;
@@ -18,6 +19,7 @@ function HomePage(props) {
     <Fragment>
       <HeroContent />
       <Preview />
+      <HeroTour />
       <FeaturedTours tours={featuredTours} />
       <RecommendedDestination />
       <Services />

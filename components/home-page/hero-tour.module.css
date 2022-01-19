@@ -1,0 +1,49 @@
+.hero-tour-section {
+  width: 100%;
+  font-family: var(--secondary_font);
+}
+
+.single-tour-item {
+  background-image: url("/images/single-tour-1.jpg");
+  /* height: ; */
+  padding: 20rem;
+  width: calc(100% - 100px);
+  border-radius: 0 0 20px 0;
+  position: relative;
+}
+
+.single-tour-info {
+  position: absolute;
+  top: 0;
+  right: -100px;
+  width: 45%;
+  background: #3f3a7f;
+  padding: 65px 80px;
+  border-radius: 0 0 0 20px;
+}
+
+.single-tour-info p {
+  color: var(--clr_white);
+  font-size: 1rem;
+  line-height: 25px;
+  margin-bottom: 1rem;
+}
+
+.single-tour-price {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.single-tour-price p {
+  margin-right: 60px;
+  color: var(--clr_white);
+}
+
+.single-tour-header {
+  color: var(--clr_white);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}

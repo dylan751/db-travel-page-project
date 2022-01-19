@@ -15,7 +15,7 @@ function Button(props) {
 
   return (
     <button className={classes.btn} onClick={props.onClick}>
-      {props.children}  <ArrowSmRightIcon className="w-6 h-6 inline-block" />
+      {props.children}  <ArrowSmRightIcon className="w-6 h-6 inline-block text-clr_jaffa" />
     </button>
   );
 }
