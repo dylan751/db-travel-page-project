@@ -9,7 +9,6 @@ export async function handler(req, res) {
       `SELECT * FROM Tour WHERE TourID = ?`,
       tourId
     );
-    // console.log(results);
     return res.json(results);
   } catch (error) {
     res.status(500).json({ message: error.message });

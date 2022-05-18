@@ -21,8 +21,6 @@ function TourSearch(props) {
     const enteredTourType = tourTypeRef.current.value;
     const enteredNumberOfPeople = numberOfPeopleRef.current.value;
 
-    // console.log(enteredPrice + " " + enteredStar + " " + enteredVehicle + " " + enteredTourType + " " + enteredNumberOfPeople);
-    
     const fullPath = `/tours/${enteredPrice}/${enteredStar}/${enteredVehicle}/${enteredTourType}/${enteredNumberOfPeople}`;
     router.push(fullPath);
   }

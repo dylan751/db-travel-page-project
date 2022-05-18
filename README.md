@@ -10,6 +10,17 @@ npm run dev
 yarn dev
 ```
 
+.env file:
+
+```bash
+MYSQL_HOST=remotemysql.com
+MYSQL_DATABASE=db646QaMHU
+MYSQL_PORT=3306
+MYSQL_USERNAME=db646QaMHU
+MYSQL_PASSWORD=cncVEg1Mzc
+NODE_ENV=development
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.

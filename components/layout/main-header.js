@@ -20,7 +20,6 @@ function MainHeader() {
   const ShoppingCartCtx = useContext(ShoppingCartContext);
 
   const router = useRouter();
-  // console.log(menuItems);
   return (
     <header className={classes.header}>
       <div className={classes.logo}>

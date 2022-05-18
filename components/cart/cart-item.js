@@ -16,7 +16,6 @@ function CartItem(props) {
 
   function increase() {
     ShoppingCartCtx.increaseQuantity(ProductID);
-    console.log(ShoppingCartCtx.cart);
   }
 
   function remove() {
