@@ -10,6 +10,8 @@ npm run dev
 yarn dev
 ```
 
+Database host at: remotemysql.com
+
 .env file:
 
 ```bash
