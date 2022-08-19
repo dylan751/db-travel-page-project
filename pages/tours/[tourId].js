@@ -2,6 +2,7 @@ import TourHeader from "../../components/tour-detail/tour-header";
 import TourContent from "../../components/tour-detail/tour-content";
 
 import { getAllTours, getTourById, getTourReviews, getDestinationById } from "../../lib/api-utils";
+import tourApi from "../../services/tourApi";
 
 const { Fragment } = require("react");
 
@@ -12,7 +13,7 @@ function TourDetailsPage(props) {
 
   return (
     <Fragment>
-      <TourHeader TieuDe={tour.TieuDe} />
+      <TourHeader title={tour.title} />
       <TourContent tour={tour} reviews={reviews} tourId={tourId} destinations={destinations} />
     </Fragment>
   );
@@ -22,7 +23,8 @@ export async function getServerSideProps(context) {
   const { params } = context;
   const tourId = params.tourId;
 
-  const selectedTour = await getTourById(tourId);
+  const res = await tourApi.getTour(tourId);
+  const selectedTour = res.data.data;
   const reviews = await getTourReviews(tourId);
   const destinations = await getDestinationById(tourId);
 
@@ -35,17 +37,5 @@ export async function getServerSideProps(context) {
     },
   };
 }
-
-// export async function getStaticPaths() {
-//   // Get all tours
-//   const allTours = await getAllTours();
-
-//   const paths = allTours.map((tour) => ({ params: { tourId: `${tour.TourID}` } }));
-
-//   return {
-//     paths: paths,
-//     fallback: true,
-//   };
-// }
 
 export default TourDetailsPage;

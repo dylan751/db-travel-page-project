@@ -28,18 +28,18 @@ function TourList(props) {
       <ul className={classes.list}>
         {currentTours.map((tour) => (
           <TourItem
-            key={tour.TourID}
-            TourID={tour.TourID}
-            TieuDe={tour.TieuDe}
-            ThoiGian={tour.ThoiGian}
-            KhachSan={tour.KhachSan}
-            PhuongTien={tour.PhuongTien}
-            DanhGia={tour.DanhGia}
-            NoiNgoaiQuoc={tour.NoiNgoaiQuoc}
-            SoLuongKhach={tour.SoLuongKhach}
-            Gia={tour.Gia}
-            SoLanDat={tour.SoLanDat}
-            Anh={tour.Anh}
+            key={tour.tourId}
+            tourId={tour.tourId}
+            title={tour.title}
+            duration={tour.duration}
+            hotel={tour.hotel}
+            vehicle={tour.vehicle}
+            rating={tour.rating}
+            type={tour.type}
+            numberOfPeople={tour.numberOfPeople}
+            price={tour.price}
+            numberOfBooking={tour.numberOfBooking}
+            image={tour.image}
           />
         ))}
       </ul>

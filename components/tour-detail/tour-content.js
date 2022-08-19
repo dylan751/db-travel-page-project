@@ -16,18 +16,18 @@ function TourContent(props) {
         <div className={classes["tour-content"]}>
           <h2>Tổng quan</h2>
           <div className={classes["image"]}>
-            <Image src={tour.Anh} alt={tour.TieuDe} width={1200} height={400} />
-            {/* <img src={tour.Anh} alt={tour.TieuDe} /> */}
+            <Image src={tour.image} alt={tour.title} width={1200} height={400} />
+            {/* <img src={tour.image} alt={tour.title} /> */}
           </div>
           <div className={classes["tour-description"]}>
             <ul>
-              <li>Giá: ${tour.Gia}</li>
-              <li>Khách sạn: {tour.KhachSan}</li>
-              <li>Kiểu tour: {tour.NoiNgoaiQuoc}</li>
-              <li>Phương tiện: {tour.PhuongTien}</li>
-              <li>Số lượng người: {tour.SoLuongKhach}</li>
+              <li>Giá: ${tour.price}</li>
+              <li>Khách sạn: {tour.hotel}</li>
+              <li>Kiểu tour: {tour.type}</li>
+              <li>Phương tiện: {tour.vehicle}</li>
+              <li>Số lượng người: {tour.numberOfPeople}</li>
             </ul>
-            <p className={classes["tour-preview"]}>{tour.MoTa}</p>
+            <p className={classes["tour-preview"]}>{tour.description}</p>
           </div>
         </div>
         <div className={classes["destination-detail-list"]}>
