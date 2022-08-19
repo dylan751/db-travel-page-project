@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { getAllProducts } from "../lib/api-utils";
 import tourApi from "../services/tourApi";
+import productApi from "../services/productApi";
 
 /* COMPONENTS */
 import HeroContent from "../components/hero-content/hero-content";
@@ -33,7 +34,8 @@ function HomePage(props) {
 
 export async function getServerSideProps() {
   const featuredTours = await tourApi.getFeaturedTours();
-  const allProducts = await getAllProducts();
+  const res = await productApi.getListProducts();
+  const allProducts = res.data.data.edges;
 
   return {
     props: {

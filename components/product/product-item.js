@@ -6,7 +6,7 @@ import { useContext } from "react";
 import {CurrencyDollarIcon} from '@heroicons/react/solid';
 
 function ProductItem(props) {
-  const { product, ProductID, TenSanPham, Gia, SoLuong, MoTa, Anh } = props;
+  const { product, productId, name, price, quantity, description, image } = props;
   
   const ShoppingCartCtx = useContext(ShoppingCartContext);
 
@@ -17,14 +17,14 @@ function ProductItem(props) {
   return (
     <li className={classes["product-item"]}>
       <div className={classes["image"]}>
-        <Image src={Anh} alt={TenSanPham} width={300} height={400} />
+        <Image src={image} alt={name} width={300} height={400} />
       </div>
-      <h2>{TenSanPham}</h2>
+      <h2>{name}</h2>
       <div className={classes["product-price"]}>
-        <p><CurrencyDollarIcon className="inline-block w-5 h-5 text-clr_jaffa" />{Gia}</p>
-        <p>Hiện còn: {SoLuong}</p>
+        <p><CurrencyDollarIcon className="inline-block w-5 h-5 text-clr_jaffa" />{price}</p>
+        <p>Hiện còn: {quantity}</p>
       </div>
-      <p className={classes["product-description"]}>{MoTa}</p>
+      <p className={classes["product-description"]}>{description}</p>
       <button onClick={onSubmitHandler}>Cho vào giỏ hàng</button>
     </li>
   );

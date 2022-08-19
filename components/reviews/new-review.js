@@ -1,12 +1,9 @@
 import classes from "./new-review.module.css";
-import {ArrowSmRightIcon} from '@heroicons/react/solid';
+import { ArrowSmRightIcon } from "@heroicons/react/solid";
 
 import { useRef, useContext } from "react";
 import NotificationContext from "../../store/notification-context";
-
-const dev = process.env.NODE_ENV !== 'production';
-
-export const server = dev ? 'http://localhost:3000' : 'https://db-travel-page-project.vercel.app';
+import axios from "axios";
 
 function NewReview(props) {
   const notificationCtx = useContext(NotificationContext);
@@ -24,9 +21,12 @@ function NewReview(props) {
     const enteredComment = CommentInputRef.current.value;
 
     const commentData = {
+      userId: 1,
       name: enteredName,
       email: enteredEmail,
-      comment: enteredComment,
+      tourId: tourId,
+      rating: 5, // TODO: Handle rating form
+      content: enteredComment,
     };
 
     notificationCtx.showNotification({
@@ -35,35 +35,24 @@ function NewReview(props) {
       status: "pending",
     });
 
-    fetch(`${server}/api/reviews/${tourId}`, {
-      method: "POST",
-      body: JSON.stringify(commentData),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
+    axios
+      .post(`${process.env.NEXT_PUBLIC_API_DOMAIN}/reviews`, commentData)
       .then((response) => {
-        if (response.ok) {
-          return response.json();
+        if (response.data.message === "SUCCESS") {
+          notificationCtx.showNotification({
+            title: "Viết Review thành công!",
+            message: "Review của bạn đã được gửi.",
+            status: "success",
+          });
+          return response.data.data;
         }
 
-        return response.json().then((data) => {
-          throw new Error(data.message || "Cannot post new Review!");
-        });
-      })
-      .then((data) => {
-        notificationCtx.showNotification({
-          title: "Viết Review thành công!",
-          message: "Review của bạn đã được gửi.",
-          status: "success",
-        });
-      })
-      .catch((error) => {
         notificationCtx.showNotification({
           title: "Lỗi mất tiêu rùi!",
           message: "Review của bạn chưa được gửi.",
           status: "error",
         });
+        throw new Error(response.data.message || "Cannot post new Review!");
       });
   }
 

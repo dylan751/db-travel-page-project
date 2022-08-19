@@ -29,13 +29,13 @@ function Products(props) {
       <Carousel breakPoints={breakPoints}>
         {products.map((product) => (
           <ProductItem
-          key={product.ProductID}
-          ProductID={product.ProductID}
-          TenSanPham={product.TenSanPham}
-          Gia={product.Gia}
-          SoLuong={product.SoLuong}
-          MoTa={product.MoTa}
-          Anh={product.Anh}
+          key={product.productId}
+          productId={product.productId}
+          name={product.name}
+          price={product.price}
+          quantity={product.quantity}
+          description={product.description}
+          image={product.image}
           product={product}
         />
         ))}

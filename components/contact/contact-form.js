@@ -2,10 +2,7 @@ import classes from "./contact-form.module.css";
 
 import { useRef, useContext } from "react";
 import NotificationContext from "../../store/notification-context";
-
-const dev = process.env.NODE_ENV !== 'production';
-
-export const server = dev ? 'http://localhost:3000' : 'https://db-travel-page-project.vercel.app';
+import axios from "axios";
 
 function ContactForm() {
   const notificationCtx = useContext(NotificationContext);
@@ -13,8 +10,8 @@ function ContactForm() {
   const nameInputRef = useRef();
   const phoneInputRef = useRef();
   const emailInputRef = useRef();
-  const subjectInputRef = useRef();
-  const messageInputRef = useRef();
+  const titleInputRef = useRef();
+  const descriptionInputRef = useRef();
 
   function submitFormHandler(event) {
     event.preventDefault();
@@ -22,10 +19,10 @@ function ContactForm() {
     const enteredName = nameInputRef.current.value;
     const enteredPhone = phoneInputRef.current.value;
     const enteredEmail = emailInputRef.current.value;
-    const enteredSubject = subjectInputRef.current.value;
-    const enteredMessage = messageInputRef.current.value;
+    const enteredTitle = titleInputRef.current.value;
+    const enteredDescription = descriptionInputRef.current.value;
 
-    if(enteredPhone.length > 11 || enteredPhone.length < 10) {
+    if (enteredPhone.length > 11 || enteredPhone.length < 10) {
       notificationCtx.showNotification({
         title: "Số điện thoại chứa 10 hoặc 11 ký tự",
         message: "Đặt vé không thành công!",
@@ -35,11 +32,12 @@ function ContactForm() {
     }
 
     const newContact = {
-      enteredName,
-      enteredPhone,
-      enteredEmail,
-      enteredSubject,
-      enteredMessage,
+      userId: 1,
+      name: enteredName,
+      phoneNumber: enteredPhone,
+      email: enteredEmail,
+      title: enteredTitle,
+      description: enteredDescription,
     };
 
     notificationCtx.showNotification({
@@ -48,35 +46,24 @@ function ContactForm() {
       status: "pending",
     });
 
-    fetch(`${server}/api/contacts`, {
-      method: "POST",
-      body: JSON.stringify(newContact),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
+    axios
+      .post(`${process.env.NEXT_PUBLIC_API_DOMAIN}/contacts`, newContact)
       .then((response) => {
-        if (response.ok) {
-          return response.json();
+        if (response.data.message === "SUCCESS") {
+          notificationCtx.showNotification({
+            title: "Gửi thông tin thành công!",
+            message: "Chúng tôi sẽ liên lạc cho bạn.",
+            status: "success",
+          });
+          return response.data.data;
         }
 
-        return response.json().then((data) => {
-          throw new Error(data.message || "Something went wrong!");
-        });
-      })
-      .then((data) => {
-        notificationCtx.showNotification({
-          title: "Gửi thông tin thành công!",
-          message: "Chúng tôi sẽ liên lạc cho bạn.",
-          status: "success",
-        });
-      })
-      .catch((error) => {
         notificationCtx.showNotification({
           title: "Lỗi mất tiêu rùi!",
           message: "Thông tin của bạn chưa được gửi đi",
           status: "error",
         });
+        throw new Error(response.data.message || "Cannot post new Review!");
       });
   }
 
@@ -105,10 +92,10 @@ function ContactForm() {
             placeholder="Số Điện Thoại"
             ref={phoneInputRef}
           />
-          <input type="text" placeholder="Chủ đề" ref={subjectInputRef} />
+          <input type="text" placeholder="Chủ đề" ref={titleInputRef} />
           <textarea
             placeholder="Nhắn nhủ yêu thương..."
-            ref={messageInputRef}
+            ref={descriptionInputRef}
           ></textarea>
           <button>Gửi Thông Tin</button>
         </div>

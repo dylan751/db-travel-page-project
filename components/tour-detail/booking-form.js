@@ -1,12 +1,9 @@
 import classes from "./booking-form.module.css";
-import {ArrowSmRightIcon} from '@heroicons/react/solid';
+import { ArrowSmRightIcon } from "@heroicons/react/solid";
 
 import { useRef, useContext } from "react";
 import NotificationContext from "../../store/notification-context";
-
-const dev = process.env.NODE_ENV !== 'production';
-
-export const server = dev ? 'http://localhost:3000' : 'https://db-travel-page-project.vercel.app';
+import axios from 'axios';
 
 function BookingForm(props) {
   const notificationCtx = useContext(NotificationContext);
@@ -31,7 +28,7 @@ function BookingForm(props) {
 
     const currentDate = new Date().toISOString();
 
-    if(enteredStartDate > enteredFinishDate) {
+    if (enteredStartDate > enteredFinishDate) {
       notificationCtx.showNotification({
         title: "Ngày khởi hành phải sau ngày kết thúc! Nhập lại!",
         message: "Đặt vé không thành công!",
@@ -40,7 +37,7 @@ function BookingForm(props) {
       return;
     }
     // -------------------------------- Validate -------------------------------------
-    if(enteredStartDate <= currentDate) {
+    if (enteredStartDate <= currentDate) {
       notificationCtx.showNotification({
         title: "Không thể đặt Tour đã diễn ra!",
         message: "Đặt vé không thành công!",
@@ -49,7 +46,7 @@ function BookingForm(props) {
       return;
     }
 
-    if(enteredPhone.length > 11 || enteredPhone.length < 10) {
+    if (enteredPhone.length > 11 || enteredPhone.length < 10) {
       notificationCtx.showNotification({
         title: "Số điện thoại chứa 10 hoặc 11 ký tự",
         message: "Đặt vé không thành công!",
@@ -60,12 +57,12 @@ function BookingForm(props) {
 
     const newForm = {
       tourId,
-      enteredName,
-      enteredPhone,
-      enteredEmail,
-      enteredStartDate,
-      enteredFinishDate,
-      enteredNumberOfPeople,
+      name: enteredName,
+      phoneNumber: enteredPhone,
+      email: enteredEmail,
+      numberOfPeople: enteredNumberOfPeople,
+      startTime: enteredStartDate,
+      endTime: enteredFinishDate,
     };
 
     notificationCtx.showNotification({
@@ -74,35 +71,24 @@ function BookingForm(props) {
       status: "pending",
     });
 
-    fetch(`${server}/api/forms`, {
-      method: "POST",
-      body: JSON.stringify(newForm),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
+    axios
+      .post(`${process.env.NEXT_PUBLIC_API_DOMAIN}/forms`, newForm)
       .then((response) => {
-        if (response.ok) {
-          return response.json();
+        if (response.data.message === "SUCCESS") {
+          notificationCtx.showNotification({
+            title: "Đặt vé thành công!",
+            message: "Đã hoàn thành đặt vé.",
+            status: "success",
+          });
+          return response.data.data;
         }
 
-        return response.json().then((data) => {
-          throw new Error(data.message || "Booking failed!");
-        });
-      })
-      .then((data) => {
-        notificationCtx.showNotification({
-          title: "Đặt vé thành công!",
-          message: "Đã hoàn thành đặt vé.",
-          status: "success",
-        });
-      })
-      .catch((error) => {
         notificationCtx.showNotification({
           title: "Lỗi mất tiêu rùi!",
           message: "Đặt vé không thành công!",
           status: "error",
         });
+        throw new Error(response.data.message || "Cannot post new Review!");
       });
   }
 

@@ -10,9 +10,9 @@ function ReviewList(props) {
       <ul className={classes["review-list-container"]}>
         {reviews.map((review) => (
           <ReviewItem
-            key={review.ReviewID}
-            HoTen={review.HoTen}
-            NoiDung={review.NoiDung}
+            key={review.reviewId}
+            name={review.name}
+            content={review.content}
           />
         ))}
       </ul>

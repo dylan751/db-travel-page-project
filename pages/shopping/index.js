@@ -1,6 +1,6 @@
 import ShoppingContent from "../../components/shopping/shopping-content";
 import ShoppingHeader from "../../components/shopping/shopping-header";
-import { getAllProducts } from "../../lib/api-utils";
+import productApi from "../../services/productApi";
 
 function ShoppingPage(props) {
   const { products } = props;
@@ -14,7 +14,8 @@ function ShoppingPage(props) {
 }
 
 export async function getServerSideProps() {
-  const products = await getAllProducts();
+  const res = await productApi.getListProducts();
+  const products = res.data.data.edges;
 
   return {
     props: {
