@@ -3,6 +3,7 @@ import TourContent from "../../components/tour-detail/tour-content";
 
 import { getAllTours, getTourById, getTourReviews, getDestinationById } from "../../lib/api-utils";
 import tourApi from "../../services/tourApi";
+import destinationApi from "../../services/destinationApi";
 
 const { Fragment } = require("react");
 
@@ -23,10 +24,12 @@ export async function getServerSideProps(context) {
   const { params } = context;
   const tourId = params.tourId;
 
-  const res = await tourApi.getTour(tourId);
-  const selectedTour = res.data.data;
+  const tourRes = await tourApi.getTour(tourId);
+  const selectedTour = tourRes.data.data;
+
   const reviews = await getTourReviews(tourId);
-  const destinations = await getDestinationById(tourId);
+
+  const destinations = await destinationApi.getDestinationByTourId(tourId);
 
   return {
     props: {

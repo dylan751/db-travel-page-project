@@ -26,12 +26,12 @@ function DestinationList(props) {
       <ul className={classes["destination-list"]}>
         {currentDestinations.map((destination) => (
           <DestinationItem
-            key={destination.DiaDiemID}
-            TourID={destination.TourID}
-            TenTour={destination.TieuDe}
-            TenDiaDiem={destination.TenDiaDiem}
-            Anh={destination.Anh}
-            MoTa={destination.MoTa}
+            key={destination.destinationId}
+            tourId={destination.tourId}
+            tourName={destination.tourName}
+            name={destination.name}
+            image={destination.image}
+            description={destination.description}
           />
         ))}
       </ul>

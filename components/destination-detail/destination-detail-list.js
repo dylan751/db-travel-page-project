@@ -8,13 +8,13 @@ function DestionDetailList(props) {
     <ul className={classes["destination-detail-list"]}>
       {destinations.map((destination) => (
         <DestinationDetailItem
-          key={destination.DiaDiemID}
-          TourID={destination.TourID}
-          TenDiaDiem={destination.TenDiaDiem}
-          DiaChi={destination.DiaChi}
-          MoTa={destination.MoTa}
-          NoiDung={destination.NoiDung}
-          Anh={destination.Anh}
+          key={destination.destinationId}
+          tourId={destination.tourId}
+          name={destination.name}
+          address={destination.address}
+          description={destination.description}
+          content={destination.content}
+          image={destination.image}
         />
       ))}
     </ul>
