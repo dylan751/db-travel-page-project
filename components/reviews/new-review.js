@@ -21,7 +21,7 @@ function NewReview(props) {
     const enteredComment = CommentInputRef.current.value;
 
     const commentData = {
-      userId: 1,
+      userId: 4,
       name: enteredName,
       email: enteredEmail,
       tourId: tourId,

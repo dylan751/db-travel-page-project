@@ -16,7 +16,7 @@ async function handler(req, res) {
 
     try {
       const results = await sql_query(
-        `INSERT INTO Review (UserID, HoTen, Email, TourID, DanhGia, NoiDung) VALUES('1', '${name}', '${email}','${tourId}','5','${comment}')`
+        `INSERT INTO Review (UserID, HoTen, Email, TourID, DanhGia, NoiDung) VALUES('4', '${name}', '${email}','${tourId}','5','${comment}')`
       );
       
       return res.json(results);

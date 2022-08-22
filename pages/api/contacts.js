@@ -10,7 +10,7 @@ async function handler(req, res) {
 
     try {
       const results = await sql_query(
-        `INSERT INTO Contact (UserID, HoTen, SoDienThoai, Email, ChuDe, ThongDiep) VALUES('1', '${name}', '${phone}', '${email}', '${subject}', '${message}')`
+        `INSERT INTO Contact (UserID, HoTen, SoDienThoai, Email, ChuDe, ThongDiep) VALUES('4', '${name}', '${phone}', '${email}', '${subject}', '${message}')`
       );
 
       return res.json(results);
