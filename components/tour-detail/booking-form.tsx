@@ -1,20 +1,23 @@
-import classes from "./booking-form.module.css";
-import { ArrowSmRightIcon } from "@heroicons/react/solid";
+import classes from './booking-form.module.css';
+import { ArrowSmRightIcon } from '@heroicons/react/solid';
 
-import { useRef, useContext } from "react";
-import NotificationContext from "../../store/notification-context";
+import { useRef, useContext } from 'react';
+import NotificationContext from '../../store/notification-context';
 import axios from 'axios';
 
-function BookingForm(props) {
-  const notificationCtx = useContext(NotificationContext);
-  const { tourId } = props;
+interface BookingFormProps {
+  tourId: number;
+}
 
-  const nameInputRef = useRef();
-  const phoneInputRef = useRef();
-  const emailInputRef = useRef();
-  const startDateRef = useRef();
-  const finishDateRef = useRef();
-  const numberOfPeopleRef = useRef();
+const BookingForm = ({ tourId }: BookingFormProps) => {
+  const notificationCtx = useContext(NotificationContext);
+
+  const nameInputRef = useRef<HTMLInputElement>();
+  const phoneInputRef = useRef<HTMLInputElement>();
+  const emailInputRef = useRef<HTMLInputElement>();
+  const startDateRef = useRef<HTMLInputElement>();
+  const finishDateRef = useRef<HTMLInputElement>();
+  const numberOfPeopleRef = useRef<HTMLInputElement>();
 
   function submitFormHandler(event) {
     event.preventDefault();
@@ -30,27 +33,27 @@ function BookingForm(props) {
 
     if (enteredStartDate > enteredFinishDate) {
       notificationCtx.showNotification({
-        title: "Ngày khởi hành phải sau ngày kết thúc! Nhập lại!",
-        message: "Đặt vé không thành công!",
-        status: "error",
+        title: 'Ngày khởi hành phải sau ngày kết thúc! Nhập lại!',
+        message: 'Đặt vé không thành công!',
+        status: 'error',
       });
       return;
     }
     // -------------------------------- Validate -------------------------------------
     if (enteredStartDate <= currentDate) {
       notificationCtx.showNotification({
-        title: "Không thể đặt Tour đã diễn ra!",
-        message: "Đặt vé không thành công!",
-        status: "error",
+        title: 'Không thể đặt Tour đã diễn ra!',
+        message: 'Đặt vé không thành công!',
+        status: 'error',
       });
       return;
     }
 
     if (enteredPhone.length > 11 || enteredPhone.length < 10) {
       notificationCtx.showNotification({
-        title: "Số điện thoại chứa 10 hoặc 11 ký tự",
-        message: "Đặt vé không thành công!",
-        status: "error",
+        title: 'Số điện thoại chứa 10 hoặc 11 ký tự',
+        message: 'Đặt vé không thành công!',
+        status: 'error',
       });
       return;
     }
@@ -66,37 +69,37 @@ function BookingForm(props) {
     };
 
     notificationCtx.showNotification({
-      title: "Đang gửi dữ liệu...",
-      message: "Đặt vé tour.",
-      status: "pending",
+      title: 'Đang gửi dữ liệu...',
+      message: 'Đặt vé tour.',
+      status: 'pending',
     });
 
     axios
       .post(`${process.env.NEXT_PUBLIC_API_DOMAIN}/forms`, newForm)
       .then((response) => {
-        if (response.data.message === "SUCCESS") {
+        if (response.data.message === 'SUCCESS') {
           notificationCtx.showNotification({
-            title: "Đặt vé thành công!",
-            message: "Đã hoàn thành đặt vé.",
-            status: "success",
+            title: 'Đặt vé thành công!',
+            message: 'Đã hoàn thành đặt vé.',
+            status: 'success',
           });
           return response.data.data;
         }
 
         notificationCtx.showNotification({
-          title: "Lỗi mất tiêu rùi!",
-          message: "Đặt vé không thành công!",
-          status: "error",
+          title: 'Lỗi mất tiêu rùi!',
+          message: 'Đặt vé không thành công!',
+          status: 'error',
         });
-        throw new Error(response.data.message || "Cannot post new Review!");
+        throw new Error(response.data.message || 'Cannot post new Review!');
       });
   }
 
   return (
-    <form className={classes["form"]} onSubmit={submitFormHandler}>
-      <div className={classes["form-controls"]}>
+    <form className={classes['form']} onSubmit={submitFormHandler}>
+      <div className={classes['form-controls']}>
         <h4>Đặt Tour Ngay</h4>
-        <div className={classes["form-control"]}>
+        <div className={classes['form-control']}>
           <input
             type="text"
             id="name"
@@ -105,7 +108,7 @@ function BookingForm(props) {
             required
           />
         </div>
-        <div className={classes["form-control"]}>
+        <div className={classes['form-control']}>
           <input
             type="tel"
             id="phone"
@@ -116,7 +119,7 @@ function BookingForm(props) {
             required
           />
         </div>
-        <div className={classes["form-control"]}>
+        <div className={classes['form-control']}>
           <input
             type="email"
             id="email"
@@ -125,13 +128,13 @@ function BookingForm(props) {
             required
           />
         </div>
-        <div className={classes["form-control"]}>
+        <div className={classes['form-control']}>
           <input type="date" id="starting-date" ref={startDateRef} />
         </div>
-        <div className={classes["form-control"]}>
+        <div className={classes['form-control']}>
           <input type="date" id="finishing-date" ref={finishDateRef} />
         </div>
-        <div className={classes["form-control"]}>
+        <div className={classes['form-control']}>
           <input
             type="number"
             id="number-of-people"
@@ -146,6 +149,6 @@ function BookingForm(props) {
       </div>
     </form>
   );
-}
+};
 
 export default BookingForm;

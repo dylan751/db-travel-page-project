@@ -1,16 +1,16 @@
-import classes from "./tour-search.module.css";
+import classes from './tour-search.module.css';
 
 import { useRef } from 'react';
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
 
-function TourSearch(props) {
+const TourSearch = () => {
   const router = useRouter();
 
-  const priceRef = useRef();
-  const starRef = useRef();
-  const vehicleRef = useRef();
-  const tourTypeRef = useRef();
-  const numberOfPeopleRef = useRef();
+  const priceRef = useRef<HTMLSelectElement>();
+  const starRef = useRef<HTMLSelectElement>();
+  const vehicleRef = useRef<HTMLSelectElement>();
+  const tourTypeRef = useRef<HTMLSelectElement>();
+  const numberOfPeopleRef = useRef<HTMLSelectElement>();
 
   function submitHandler(event) {
     event.preventDefault();
@@ -26,11 +26,11 @@ function TourSearch(props) {
   }
 
   return (
-    <div className={classes["tour-search"]}>
+    <div className={classes['tour-search']}>
       <h1>Tìm Tour Cho Bạn</h1>
-      <form className={classes["form"]} onSubmit={submitHandler}>
-        <div className={classes["form-controls"]}>
-          <div className={classes["form-control"]}>
+      <form className={classes['form']} onSubmit={submitHandler}>
+        <div className={classes['form-controls']}>
+          <div className={classes['form-control']}>
             <select id="price" ref={priceRef}>
               <option value="0">Giá</option>
               <option value="1">1 - 400</option>
@@ -39,7 +39,7 @@ function TourSearch(props) {
               <option value="1201">1201 - 1600</option>
             </select>
           </div>
-          <div className={classes["form-control"]}>
+          <div className={classes['form-control']}>
             <select id="star" ref={starRef}>
               <option value="0">Số sao</option>
               <option value="1">1</option>
@@ -49,7 +49,7 @@ function TourSearch(props) {
               <option value="5">5</option>
             </select>
           </div>
-          <div className={classes["form-control"]}>
+          <div className={classes['form-control']}>
             <select id="vehicle" ref={vehicleRef}>
               <option value="0">Phương tiện</option>
               <option value="Máy bay">Máy bay</option>
@@ -58,14 +58,14 @@ function TourSearch(props) {
               <option value="Xe buýt">Xe buýt</option>
             </select>
           </div>
-          <div className={classes["form-control"]}>
+          <div className={classes['form-control']}>
             <select id="tour-type" ref={tourTypeRef}>
               <option value="0">Kiểu Tour</option>
               <option value="Trong nước">Trong nước</option>
               <option value="Nước ngoài">Nước ngoài</option>
             </select>
           </div>
-          <div className={classes["form-control"]}>
+          <div className={classes['form-control']}>
             <select id="number-of-people" ref={numberOfPeopleRef}>
               <option value="0">Số lượng người</option>
               <option value="1-4">1 - 4</option>

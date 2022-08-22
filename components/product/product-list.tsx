@@ -1,38 +1,41 @@
-import { useRef, useState } from "react";
-import { useRouter } from "next/router";
+import { useRef, useState } from 'react';
+import { useRouter } from 'next/router';
 
-import ProductItem from "./product-item";
-import classes from "./product-list.module.css";
-import Pagination from "../pagination";
+import ProductItem from './product-item';
+import classes from './product-list.module.css';
+import Pagination from '../pagination';
+import { Product } from '../../models/Product';
 
-function ProductList(props) {
-  const productFilterRef = useRef();
+interface ProductListProps {
+  products: Product[];
+}
+
+const ProductList = ({ products }: ProductListProps) => {
+  const productFilterRef = useRef<HTMLSelectElement>();
   const router = useRouter();
 
-  const { products } = props;
-
   // ----------- PAGINATION PART --------------
-  const [pageSize] = useState(6);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [pageSize] = useState<number>(6);
+  const [currentPage, setCurrentPage] = useState<number>(1);
   const indexOfLastItem = currentPage * pageSize;
   const indexOfFirstItem = indexOfLastItem - pageSize;
 
   const currentProducts = products.slice(indexOfFirstItem, indexOfLastItem);
 
-  function selectCurrentPage(page) {
+  const selectCurrentPage = (page: number) => {
     setCurrentPage(page);
-  }
+  };
 
   // ------------------------------------------
-  function sortHandler() {
+  const sortHandler = () => {
     router.push(`/shopping/${productFilterRef.current.value}`);
-  }
+  };
 
   return (
-    <div className={classes["product-list"]}>
-      <div className={classes["product-filter"]}>
+    <div className={classes['product-list']}>
+      <div className={classes['product-filter']}>
         <select
-          className={classes["product-filter-select"]}
+          className={classes['product-filter-select']}
           ref={productFilterRef}
         >
           <option value="0">Sắp Xếp Sản Phẩm</option>
@@ -41,7 +44,7 @@ function ProductList(props) {
         </select>
         <button onClick={sortHandler}>Sắp xếp</button>
       </div>
-      <ul className={classes["product-list-item"]}>
+      <ul className={classes['product-list-item']}>
         {currentProducts.map((product) => (
           <ProductItem
             key={product.productId}
@@ -63,6 +66,6 @@ function ProductList(props) {
       />
     </div>
   );
-}
+};
 
 export default ProductList;

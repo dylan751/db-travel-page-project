@@ -1,17 +1,20 @@
-import classes from "./new-review.module.css";
-import { ArrowSmRightIcon } from "@heroicons/react/solid";
+import classes from './new-review.module.css';
+import { ArrowSmRightIcon } from '@heroicons/react/solid';
 
-import { useRef, useContext } from "react";
-import NotificationContext from "../../store/notification-context";
-import axios from "axios";
+import { useRef, useContext } from 'react';
+import NotificationContext from '../../store/notification-context';
+import axios from 'axios';
 
-function NewReview(props) {
+interface NewReviewProps {
+  tourId: number;
+}
+
+const NewReview = ({ tourId }: NewReviewProps) => {
   const notificationCtx = useContext(NotificationContext);
-  const { tourId } = props;
 
-  const NameInputRef = useRef();
-  const EmailInputRef = useRef();
-  const CommentInputRef = useRef();
+  const NameInputRef = useRef<HTMLInputElement>();
+  const EmailInputRef = useRef<HTMLInputElement>();
+  const CommentInputRef = useRef<HTMLTextAreaElement>();
 
   function submitNewReview(event) {
     event.preventDefault();
@@ -30,38 +33,38 @@ function NewReview(props) {
     };
 
     notificationCtx.showNotification({
-      title: "Đang gửi dữ liệu...",
-      message: "Gửi Review cho tour.",
-      status: "pending",
+      title: 'Đang gửi dữ liệu...',
+      message: 'Gửi Review cho tour.',
+      status: 'pending',
     });
 
     axios
       .post(`${process.env.NEXT_PUBLIC_API_DOMAIN}/reviews`, commentData)
       .then((response) => {
-        if (response.data.message === "SUCCESS") {
+        if (response.data.message === 'SUCCESS') {
           notificationCtx.showNotification({
-            title: "Viết Review thành công!",
-            message: "Review của bạn đã được gửi.",
-            status: "success",
+            title: 'Viết Review thành công!',
+            message: 'Review của bạn đã được gửi.',
+            status: 'success',
           });
           return response.data.data;
         }
 
         notificationCtx.showNotification({
-          title: "Lỗi mất tiêu rùi!",
-          message: "Review của bạn chưa được gửi.",
-          status: "error",
+          title: 'Lỗi mất tiêu rùi!',
+          message: 'Review của bạn chưa được gửi.',
+          status: 'error',
         });
-        throw new Error(response.data.message || "Cannot post new Review!");
+        throw new Error(response.data.message || 'Cannot post new Review!');
       });
   }
 
   return (
-    <div className={classes["new-review"]}>
+    <div className={classes['new-review']}>
       <h2>Để lại bình luận</h2>
-      <form className={classes["new-review-form"]} onSubmit={submitNewReview}>
-        <div className={classes["new-review-form-controls"]}>
-          <div className={classes["new-review-form-control"]}>
+      <form className={classes['new-review-form']} onSubmit={submitNewReview}>
+        <div className={classes['new-review-form-controls']}>
+          <div className={classes['new-review-form-control']}>
             <input
               type="text"
               placeholder="Họ và tên*"
@@ -86,6 +89,6 @@ function NewReview(props) {
       </form>
     </div>
   );
-}
+};
 
 export default NewReview;

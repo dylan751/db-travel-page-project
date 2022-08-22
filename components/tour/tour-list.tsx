@@ -1,13 +1,16 @@
 import { useState } from 'react';
+import { Tour } from '../../models/Tour';
 import Pagination from '../pagination';
 import TourItem from './tour-item';
 import classes from './tour-list.module.css';
 
-function TourList(props) {
-  const { tours } = props;
+interface TourListProps {
+  tours: Tour[];
+}
 
-  const [pageSize] = useState(8);
-  const [currentPage, setCurrentPage] = useState(1);
+const TourList = ({ tours }: TourListProps) => {
+  const [pageSize] = useState<number>(8);
+  const [currentPage, setCurrentPage] = useState<number>(1);
   const indexOfLastItem = currentPage * pageSize;
   const indexOfFirstItem = indexOfLastItem - pageSize;
 
@@ -55,6 +58,6 @@ function TourList(props) {
       />
     </>
   );
-}
+};
 
 export default TourList;
