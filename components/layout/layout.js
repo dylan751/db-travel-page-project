@@ -1,5 +1,3 @@
-import { Fragment } from "react/cjs/react.production.min";
-
 import MainHeader from "./main-header";
 import MainFooter from "./main-footer";
 import Notification from "../ui/notification";
@@ -12,7 +10,7 @@ function Layout(props) {
   const activeNotification = notificationCtx.notification;
 
   return (
-    <Fragment>
+    <>
       <MainHeader />
       <main>{props.children}</main>
       <MainFooter />
@@ -23,7 +21,7 @@ function Layout(props) {
           status={activeNotification.status}
         />
       )}
-    </Fragment>
+    </>
   );
 }
 

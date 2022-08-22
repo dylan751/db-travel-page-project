@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import tourApi from '../services/tourApi';
 import productApi from '../services/productApi';
 
@@ -23,7 +22,7 @@ interface HomePageProps {
 
 function HomePage({ featuredTours, allProducts }: HomePageProps) {
   return (
-    <Fragment>
+    <>
       <HeroContent />
       <Preview />
       <HeroTour />
@@ -33,7 +32,7 @@ function HomePage({ featuredTours, allProducts }: HomePageProps) {
       <AboutUs />
       <Products products={allProducts} />
       <ContactUs />
-    </Fragment>
+    </>
   );
 }
 

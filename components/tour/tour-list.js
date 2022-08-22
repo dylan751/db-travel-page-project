@@ -1,7 +1,7 @@
-import { Fragment, useState } from "react";
-import Pagination from "../pagination";
-import TourItem from "./tour-item";
-import classes from "./tour-list.module.css";
+import { useState } from 'react';
+import Pagination from '../pagination';
+import TourItem from './tour-item';
+import classes from './tour-list.module.css';
 
 function TourList(props) {
   const { tours } = props;
@@ -17,14 +17,18 @@ function TourList(props) {
     setCurrentPage(page);
   }
 
-  if(tours.length === 0) {
-    return <Fragment>
-      <h2 className={classes["no-tour-inform"]}>Không tìm thấy Tour phù hợp</h2>
-    </Fragment>
+  if (tours.length === 0) {
+    return (
+      <>
+        <h2 className={classes['no-tour-inform']}>
+          Không tìm thấy Tour phù hợp
+        </h2>
+      </>
+    );
   }
 
   return (
-    <Fragment>
+    <>
       <ul className={classes.list}>
         {currentTours.map((tour) => (
           <TourItem
@@ -49,7 +53,7 @@ function TourList(props) {
         currentPage={currentPage}
         total={tours.length}
       />
-    </Fragment>
+    </>
   );
 }
 

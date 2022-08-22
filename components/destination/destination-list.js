@@ -1,6 +1,6 @@
 import classes from "./destination-list.module.css";
 import DestinationItem from "./destination-item";
-import { Fragment, useState } from "react";
+import { useState } from "react";
 
 import Pagination from "../pagination";
 
@@ -22,7 +22,7 @@ function DestinationList(props) {
   }
 
   return (
-    <Fragment>
+    <>
       <ul className={classes["destination-list"]}>
         {currentDestinations.map((destination) => (
           <DestinationItem
@@ -41,7 +41,7 @@ function DestinationList(props) {
         currentPage={currentPage}
         total={destinations.length}
       />
-    </Fragment>
+    </>
   );
 }
 

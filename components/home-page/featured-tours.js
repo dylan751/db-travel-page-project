@@ -1,8 +1,5 @@
 import classes from "./featured-tours.module.css";
-import TourList from "../tour/tour-list";
 import Button from "../ui/button";
-import { getAllTours, getFeaturedTours } from "../../lib/api-utils";
-
 import TourItem from "../tour/tour-item";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";

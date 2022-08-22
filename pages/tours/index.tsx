@@ -1,5 +1,4 @@
 import { GetServerSideProps } from 'next';
-import { Fragment } from 'react';
 import TourList from '../../components/tour/tour-list';
 import TourSearch from '../../components/tour/tour-search';
 import { Tour } from '../../models/Tour';
@@ -11,10 +10,10 @@ interface AllToursPageProps {
 
 function AllToursPage({ tours }: AllToursPageProps) {
   return (
-    <Fragment>
+    <>
       <TourSearch />
       <TourList tours={tours} />
-    </Fragment>
+    </>
   );
 }
 

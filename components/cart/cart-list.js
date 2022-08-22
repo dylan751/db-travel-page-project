@@ -3,7 +3,6 @@ import classes from "./cart-list.module.css";
 
 import ShoppingCartContext from "../../store/shopping-cart-context";
 import { useContext } from "react";
-import { Fragment } from "react/cjs/react.production.min";
 
 function CartList() {
   const ShoppingCartCtx = useContext(ShoppingCartContext);
@@ -11,7 +10,7 @@ function CartList() {
 
   if (cartItems.length === 0) {
     return (
-      <Fragment>
+      <>
         <ul className={classes["cart-list"]}>
           <li className={classes["cart-list-header"]}>
             <p className={classes["cart-list-header__product"]}>Sản Phẩm</p>
@@ -22,12 +21,12 @@ function CartList() {
           </li>
           <h2 className={classes["empty-cart-information"]}>Chưa có sản phẩm trong giỏ hàng</h2>
         </ul>
-      </Fragment>
+      </>
     );
   }
 
   return (
-    <Fragment>
+    <>
       {/* <ul className={classes["cart-list-header"]}></ul> */}
       <ul className={classes["cart-list"]}>
         <li className={classes["cart-list-header"]}>
@@ -48,7 +47,7 @@ function CartList() {
           />
         ))}
       </ul>
-    </Fragment>
+    </>
   );
 }
 

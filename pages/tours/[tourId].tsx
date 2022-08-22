@@ -8,8 +8,6 @@ import { Tour } from '../../models/Tour';
 import { Destination } from '../../models/Destination';
 import { Review } from '../../models/Review';
 
-const { Fragment } = require('react');
-
 interface TourDetailsPageProps {
   tourId: number;
   tour: Tour;
@@ -24,7 +22,7 @@ function TourDetailsPage({
   reviews,
 }: TourDetailsPageProps) {
   return (
-    <Fragment>
+    <>
       <TourHeader title={tour.title} />
       <TourContent
         tour={tour}
@@ -32,7 +30,7 @@ function TourDetailsPage({
         tourId={tourId}
         destinations={destinations}
       />
-    </Fragment>
+    </>
   );
 }
 
