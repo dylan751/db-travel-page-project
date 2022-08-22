@@ -1,12 +1,15 @@
-import { Fragment } from "react/cjs/react.production.min";
-import TourList from "../../components/tour/tour-list";
-import TourSearch from "../../components/tour/tour-search";
-import { getFilteredTours } from "../../lib/api-utils";
-import tourApi from "../../services/tourApi";
+import { GetServerSideProps } from 'next';
+import { Fragment } from 'react/cjs/react.production.min';
+import TourList from '../../components/tour/tour-list';
+import TourSearch from '../../components/tour/tour-search';
+import { Tour } from '../../models/Tour';
+import tourApi from '../../services/tourApi';
 
-function FilteredToursPage(props) {
-  const { tours } = props;
+interface FilteredToursPageProps {
+  tours: Tour[];
+}
 
+function FilteredToursPage({ tours }: FilteredToursPageProps) {
   return (
     <Fragment>
       <TourSearch />
@@ -15,7 +18,7 @@ function FilteredToursPage(props) {
   );
 }
 
-export async function getServerSideProps(context) {
+export const getServerSideProps: GetServerSideProps = async (context) => {
   const { params } = context;
 
   const filteredData = params.slug;
@@ -31,7 +34,7 @@ export async function getServerSideProps(context) {
     star,
     vehicle,
     type,
-    numberOfPeople
+    numberOfPeople,
   );
   console.log(filteredTours);
 
@@ -40,6 +43,6 @@ export async function getServerSideProps(context) {
       tours: filteredTours,
     },
   };
-}
+};
 
 export default FilteredToursPage;

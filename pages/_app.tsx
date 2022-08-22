@@ -1,12 +1,12 @@
-import Head from "next/head";
-import { Fragment } from "react";
-import Layout from "../components/layout/layout";
-import { NotificationContextProvider } from "../store/notification-context";
-import { ShoppingCartContextProvider } from "../store/shopping-cart-context";
-import "../styles/globals.css";
-import NextNProgress from "nextjs-progressbar";
+import Head from 'next/head';
+import Layout from '../components/layout/layout';
+import { NotificationContextProvider } from '../store/notification-context';
+import { ShoppingCartContextProvider } from '../store/shopping-cart-context';
+import '../styles/globals.css';
+import NextNProgress from 'nextjs-progressbar';
+import { AppProps } from 'next/app';
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ShoppingCartContextProvider>
       <NotificationContextProvider>
@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
             <title>Bunichi's Travel Page</title>
             <script
               src="https://kit.fontawesome.com/7162e07bef.js"
-              crossorigin="anonymous"
+              crossOrigin="anonymous"
               defer
             ></script>
             <meta
