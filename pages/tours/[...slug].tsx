@@ -35,7 +35,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     type,
     numberOfPeople,
   );
-  console.log(filteredTours);
 
   return {
     props: {

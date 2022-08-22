@@ -1,10 +1,10 @@
-import MainHeader from "./main-header";
-import MainFooter from "./main-footer";
-import Notification from "../ui/notification";
-import NotificationContext from "../../store/notification-context";
-import { useContext } from "react";
+import MainHeader from './main-header';
+import MainFooter from './main-footer';
+import Notification from '../ui/notification';
+import NotificationContext from '../../store/notification-context';
+import { useContext } from 'react';
 
-function Layout(props) {
+const Layout = (props) => {
   const notificationCtx = useContext(NotificationContext);
 
   const activeNotification = notificationCtx.notification;
@@ -23,6 +23,6 @@ function Layout(props) {
       )}
     </>
   );
-}
+};
 
 export default Layout;

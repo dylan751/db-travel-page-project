@@ -1,10 +1,21 @@
-import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/solid";
-import classes from "./Pagination.module.css";
+import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/react/solid';
+import classes from './Pagination.module.css';
 
-function Pagination(props) {
-  const { pageSize, total, currentPage, setCurrentPage } = props;
+interface PaginationProps {
+  pageSize: number;
+  total: number;
+  currentPage: number;
+  setCurrentPage: (page: number) => void;
+}
 
+const Pagination = ({
+  pageSize,
+  total,
+  currentPage,
+  setCurrentPage,
+}: PaginationProps) => {
   const pageNumbers = [];
+
   for (let i = 1; i <= Math.ceil(total / pageSize); i++) {
     pageNumbers.push(i);
   }
@@ -21,15 +32,15 @@ function Pagination(props) {
   }
 
   return (
-    <nav className={classes["pagination"]}>
-      <ul className={classes["pagination__list"]}>
-        <li className={classes["arrow"]}>
+    <nav className={classes['pagination']}>
+      <ul className={classes['pagination__list']}>
+        <li className={classes['arrow']}>
           <ChevronLeftIcon className="w-6 h-6 inline-block" />
         </li>
         {pageNumbers.map((number) => {
           return (
             <li
-              className={classes[currentPage == number ? "current" : ""]}
+              className={classes[currentPage == number ? 'current' : '']}
               key={number}
               id={JSON.stringify(number)}
               onClick={() => {
@@ -40,12 +51,12 @@ function Pagination(props) {
             </li>
           );
         })}
-        <li className={classes["arrow"]}>
+        <li className={classes['arrow']}>
           <ChevronRightIcon className="w-6 h-6 inline-block" />
         </li>
       </ul>
     </nav>
   );
-}
+};
 
 export default Pagination;

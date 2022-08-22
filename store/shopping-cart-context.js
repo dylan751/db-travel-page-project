@@ -1,12 +1,12 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect } from 'react';
 
 const ShoppingCartContext = createContext({
   products: [],
-  cart: [], // [{ProductID, TenSanPham, Gia, SoLuong, MoTa, PhanLoai, Anh}, ...]
+  cart: [], // [{productId, name, price, quantity, description, category, image}, ...]
   addToCart: function (product) {},
-  reduceQuantity: function () {},
-  increaseQuantity: function () {},
-  removeProduct: function () {},
+  reduceQuantity: function (productId) {},
+  increaseQuantity: function (productId) {},
+  removeProduct: function (productId) {},
   totalPrice: function () {},
 });
 
@@ -15,19 +15,19 @@ export function ShoppingCartContextProvider(props) {
 
   function addToCartHandler(product) {
     // Nếu tất cả sản phẩm đều khác Id của sản phẩm mới => Push vào (nếu không nghĩa là trùng sản phẩm)
-    const check = cart.every((item) => item.ProductID !== product.ProductID);
+    const check = cart.every((item) => item.productId !== product.productId);
 
     if (check) {
       setCart([...cart, { ...product }]);
     } else {
-      alert("Sản phẩm đã được thêm vào giỏ hàng!");
+      alert('Sản phẩm đã được thêm vào giỏ hàng!');
     }
   }
 
   function reduceQuantity(id) {
     cart.map((item) => {
-      if (item.ProductID === id) {
-        item.Count === 1 ? (item.Count = 1) : (item.Count -= 1);
+      if (item.productId === id) {
+        item.count === 1 ? (item.count = 1) : (item.count -= 1);
       }
     });
     setCart([...cart]); // mutation
@@ -35,17 +35,17 @@ export function ShoppingCartContextProvider(props) {
 
   function increaseQuantity(id) {
     cart.map((item) => {
-      if (item.ProductID === id) {
-        item.Count += 1;
+      if (item.productId === id) {
+        item.count += 1;
       }
     });
     setCart([...cart]);
   }
 
   function removeProduct(id) {
-    if (window.confirm("Bạn muốn xóa sản phẩm này?")) {
+    if (window.confirm('Bạn muốn xóa sản phẩm này?')) {
       cart.forEach((item, index) => {
-        if (item.ProductID === id) {
+        if (item.productId === id) {
           cart.splice(index, 1);
         }
       });
@@ -55,7 +55,7 @@ export function ShoppingCartContextProvider(props) {
 
   function totalPrice() {
     const res = cart.reduce((prev, item) => {
-      return prev + item.Gia * item.Count;
+      return prev + item.price * item.count;
     }, 0);
     return res;
   }

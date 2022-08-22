@@ -1,22 +1,22 @@
-import Link from "next/link";
-import classes from "./main-header.module.css";
+import Link from 'next/link';
+import classes from './main-header.module.css';
 
-import { useContext } from "react";
+import { useContext } from 'react';
 
-import { ShoppingCartIcon } from "@heroicons/react/solid";
-import ShoppingCartContext from "../../store/shopping-cart-context";
-import { useRouter } from "next/router";
-import Menu from "./menu";
+import { ShoppingCartIcon } from '@heroicons/react/solid';
+import ShoppingCartContext from '../../store/shopping-cart-context';
+import { useRouter } from 'next/router';
+import Menu from './menu';
 
 export const menuItems = [
-  { url: "/", title: "Trang chủ" },
-  { url: "/tours", title: "Các Tour" },
-  { url: "/destination", title: "Địa điểm giải trí" },
-  { url: "/shopping", title: "Cửa hàng" },
-  { url: "/contact-us", title: "Liên hệ" },
+  { url: '/', title: 'Trang chủ' },
+  { url: '/tours', title: 'Các Tour' },
+  { url: '/destination', title: 'Địa điểm giải trí' },
+  { url: '/shopping', title: 'Cửa hàng' },
+  { url: '/contact-us', title: 'Liên hệ' },
 ];
 
-function MainHeader() {
+const MainHeader = () => {
   const ShoppingCartCtx = useContext(ShoppingCartContext);
 
   const router = useRouter();
@@ -30,7 +30,7 @@ function MainHeader() {
           {menuItems.map((menu) => (
             <Menu key={menu.url} menu={menu} currentPath={router.pathname} />
           ))}
-          <li className={classes["shopping-cart-icon"]}>
+          <li className={classes['shopping-cart-icon']}>
             <span>{ShoppingCartCtx.cart.length}</span>
             <Link href="/cart">
               <div>
@@ -42,6 +42,6 @@ function MainHeader() {
       </nav>
     </header>
   );
-}
+};
 
 export default MainHeader;
