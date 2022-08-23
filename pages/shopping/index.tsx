@@ -20,7 +20,6 @@ function ShoppingPage({ products }: ShoppingPageProps) {
 export const getServerSideProps: GetServerSideProps = async () => {
   const res = await productApi.getListProducts();
   const products = res.data.data.edges;
-  console.log(products);
 
   return {
     props: {

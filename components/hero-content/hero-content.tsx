@@ -1,6 +1,6 @@
 import classes from "./hero-content.module.css";
 
-function HeroContent() {
+const HeroContent = () => {
   return (
     <div className={classes["hero-image"]}>
       <div className={classes["hero-text"]}>

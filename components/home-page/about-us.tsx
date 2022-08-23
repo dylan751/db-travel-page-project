@@ -1,15 +1,15 @@
-import classes from "./about-us.module.css";
+import classes from './about-us.module.css';
 
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
-import { TruckIcon, ChatIcon, BookOpenIcon } from "@heroicons/react/solid";
+import { TruckIcon, ChatIcon, BookOpenIcon } from '@heroicons/react/solid';
 
-function AboutUs() {
+const AboutUs = () => {
   return (
-    <section className={classes["about-us"]}>
-      <div className={classes["about"]}>
-        <div className={classes["header"]}>
+    <section className={classes['about-us']}>
+      <div className={classes['about']}>
+        <div className={classes['header']}>
           <span>Về Bunichi</span>
           <h2>Chúng tôi đem tới dịch vụ tốt nhất</h2>
           <p>
@@ -18,7 +18,7 @@ function AboutUs() {
             vụ tuyệt vời
           </p>
         </div>
-        <ul className={classes["content"]}>
+        <ul className={classes['content']}>
           <li>
             <TruckIcon className="w-12 h-5 inline-block text-clr_jaffa" />
             <div>
@@ -37,7 +37,7 @@ function AboutUs() {
                 Chúng tôi quan niệm rằng "khách hàng là thượng đế", nếu có bất
                 kì băn khoăn gì về chất lượng và giá cả xin vui lòng liên hệ
                 <Link href="/contact-us">
-                  <a className={classes["contact-link"]}> Tại đây</a>
+                  <a className={classes['contact-link']}> Tại đây</a>
                 </Link>
               </p>
             </div>
@@ -55,10 +55,10 @@ function AboutUs() {
           </li>
         </ul>
       </div>
-      <div className={classes["review"]}>
-        <ul className={classes["review-grid"]}>
-          <li className={classes["review-item"]}>
-            <div className={classes["image"]}>
+      <div className={classes['review']}>
+        <ul className={classes['review-grid']}>
+          <li className={classes['review-item']}>
+            <div className={classes['image']}>
               <Image
                 src="/images/reviewer-duong.jpg"
                 alt="Hai Duong"
@@ -66,7 +66,7 @@ function AboutUs() {
                 height={340}
               />
             </div>
-            <div className={classes["review-content"]}>
+            <div className={classes['review-content']}>
               <h5>Nguyễn Hải Dương</h5>
               <p>Giám đốc điều hành</p>
               <p>
@@ -75,8 +75,8 @@ function AboutUs() {
               </p>
             </div>
           </li>
-          <li className={classes["review-item"]}>
-            <div className={classes["image"]}>
+          <li className={classes['review-item']}>
+            <div className={classes['image']}>
               <Image
                 src="/images/reviewer-hien.jpg"
                 alt="Van Hien"
@@ -84,7 +84,7 @@ function AboutUs() {
                 height={340}
               />
             </div>
-            <div className={classes["review-content"]}>
+            <div className={classes['review-content']}>
               <h5>Hoàng Văn Hiển</h5>
               <p>Sinh viên IT-E6</p>
               <p>
@@ -97,6 +97,6 @@ function AboutUs() {
       </div>
     </section>
   );
-}
+};
 
 export default AboutUs;

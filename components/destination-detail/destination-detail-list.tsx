@@ -1,15 +1,17 @@
-import DestinationDetailItem from "./destination-detail-item";
-import classes from "./destination-detail-list.module.css";
+import { Destination } from '../../models/Destination';
+import DestinationDetailItem from './destination-detail-item';
+import classes from './destination-detail-list.module.css';
 
-function DestionDetailList(props) {
-  const { destinations } = props;
+interface DestionDetailListProps {
+  destinations: Destination[];
+}
 
+function DestionDetailList({ destinations }: DestionDetailListProps) {
   return (
-    <ul className={classes["destination-detail-list"]}>
+    <ul className={classes['destination-detail-list']}>
       {destinations.map((destination) => (
         <DestinationDetailItem
           key={destination.destinationId}
-          tourId={destination.tourId}
           name={destination.name}
           address={destination.address}
           description={destination.description}

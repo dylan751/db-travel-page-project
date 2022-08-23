@@ -1,9 +1,10 @@
-import classes from "./featured-tours.module.css";
-import Button from "../ui/button";
-import TourItem from "../tour/tour-item";
+import classes from './featured-tours.module.css';
+import Button from '../ui/button';
+import TourItem from '../tour/tour-item';
 
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Carousel from "react-elastic-carousel";
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Carousel from 'react-elastic-carousel';
+import { Tour } from '../../models/Tour';
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -12,12 +13,10 @@ const breakPoints = [
   { width: 1200, itemsToShow: 4 },
 ];
 
-function FeaturedTours(props) {
-  const { tours } = props;
-
+const FeaturedTours = ({ tours }) => {
   return (
-    <section className={classes["featured-tour"]}>
-      <div className={classes["featured-tour-header"]}>
+    <section className={classes['featured-tour']}>
+      <div className={classes['featured-tour-header']}>
         <div>
           <span>Sắp tới</span>
           <h2>Tour Tuyệt Nhất Trong Năm</h2>
@@ -27,7 +26,6 @@ function FeaturedTours(props) {
         </div>
       </div>
       <Carousel breakPoints={breakPoints} enableAutoPlay autoPlaySpeed={4000}>
-        {/* <TourList tours={tours} /> */}
         {tours.map((tour) => (
           <TourItem
             key={tour.tourId}
@@ -47,6 +45,6 @@ function FeaturedTours(props) {
       </Carousel>
     </section>
   );
-}
+};
 
 export default FeaturedTours;

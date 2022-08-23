@@ -1,20 +1,23 @@
-import classes from "./destination-list.module.css";
-import DestinationItem from "./destination-item";
-import { useState } from "react";
+import classes from './destination-list.module.css';
+import DestinationItem from './destination-item';
+import { useState } from 'react';
 
-import Pagination from "../pagination";
+import Pagination from '../pagination';
+import { Destination } from '../../models/Destination';
 
-function DestinationList(props) {
-  const { destinations } = props;
+interface DestinationListProps {
+  destinations: Destination[];
+}
 
-  const [pageSize] = useState(9);
-  const [currentPage, setCurrentPage] = useState(1);
+const DestinationList = ({ destinations }: DestinationListProps) => {
+  const [pageSize] = useState<number>(9);
+  const [currentPage, setCurrentPage] = useState<number>(1);
   const indexOfLastItem = currentPage * pageSize;
   const indexOfFirstItem = indexOfLastItem - pageSize;
 
   const currentDestinations = destinations.slice(
     indexOfFirstItem,
-    indexOfLastItem
+    indexOfLastItem,
   );
 
   function selectCurrentPage(page) {
@@ -23,7 +26,7 @@ function DestinationList(props) {
 
   return (
     <>
-      <ul className={classes["destination-list"]}>
+      <ul className={classes['destination-list']}>
         {currentDestinations.map((destination) => (
           <DestinationItem
             key={destination.destinationId}
@@ -43,6 +46,6 @@ function DestinationList(props) {
       />
     </>
   );
-}
+};
 
 export default DestinationList;

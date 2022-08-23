@@ -1,11 +1,11 @@
-import classes from "./contact-information.module.css";
+import classes from './contact-information.module.css';
 
-function ContactInformation() {
+const ContactInformation = () => {
   return (
-    <div className={classes["contact-information"]}>
-      <div className={classes["contact-information-container"]}>
-        <div className={classes["contact-information-item"]}>
-          <div className={classes["contact-information-icon"]}>
+    <div className={classes['contact-information']}>
+      <div className={classes['contact-information-container']}>
+        <div className={classes['contact-information-item']}>
+          <div className={classes['contact-information-icon']}>
             <i className="fas fa-map-marker-alt"></i>
           </div>
           <h5>Trụ Sở Chính</h5>
@@ -15,8 +15,8 @@ function ContactInformation() {
             Việt Nam
           </p>
         </div>
-        <div className={classes["contact-information-item"]}>
-          <div className={classes["contact-information-icon"]}>
+        <div className={classes['contact-information-item']}>
+          <div className={classes['contact-information-icon']}>
             <i className="fas fa-map-marker-alt"></i>
           </div>
           <h5>Liên Lạc</h5>
@@ -26,8 +26,8 @@ function ContactInformation() {
             Website: bunichi.com
           </p>
         </div>
-        <div className={classes["contact-information-item"]}>
-          <div className={classes["contact-information-icon"]}>
+        <div className={classes['contact-information-item']}>
+          <div className={classes['contact-information-icon']}>
             <i className="fas fa-map-marker-alt"></i>
           </div>
           <h5>Theo Dõi Trên</h5>
@@ -39,6 +39,6 @@ function ContactInformation() {
       </div>
     </div>
   );
-}
+};
 
 export default ContactInformation;

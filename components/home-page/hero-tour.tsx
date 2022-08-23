@@ -1,22 +1,21 @@
-import classes from "./hero-tour.module.css";
+import classes from './hero-tour.module.css';
 
-import Link from "next/link";
-import { StarIcon } from "@heroicons/react/solid";
-import Button from "../ui/button";
-import { ArrowCircleRightIcon } from "@heroicons/react/outline";
+import Link from 'next/link';
+import { StarIcon } from '@heroicons/react/solid';
+import Button from '../ui/button';
 
-function HeroTour() {
+const HeroTour = () => {
   return (
-    <section className={classes["hero-tour-section"]}>
-      <div className={classes["single-tour-item"]}>
-        <div className={classes["single-tour-info"]}>
-          <div className={classes["single-tour-price"]}>
+    <section className={classes['hero-tour-section']}>
+      <div className={classes['single-tour-item']}>
+        <div className={classes['single-tour-info']}>
+          <div className={classes['single-tour-price']}>
             <p>10 ngày</p>
             <p>
               4 <StarIcon className="w-5 h-5 inline-block text-clr_jaffa" />
             </p>
           </div>
-          <h2 className={classes["single-tour-header"]}>Trải nghiệm Bali</h2>
+          <h2 className={classes['single-tour-header']}>Trải nghiệm Bali</h2>
           <p>
             Hòn đảo xinh đẹp Bali của quốc gia vạn đảo Indonesia đã quá nổi
             tiếng trên bản đồ du lịch Thế Giới, đặc biệt là dành cho các kỳ nghỉ
@@ -30,6 +29,6 @@ function HeroTour() {
       </div>
     </section>
   );
-}
+};
 
 export default HeroTour;

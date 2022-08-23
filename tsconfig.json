@@ -15,6 +15,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "store/notification-context.js", "components/ui/button.js", "components/ui/notification.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "store/notification-context.js", "components/home-page/products.js", "components/home-page/featured-tours.js", "components/product/product-list.js", "components/product/product-item.js", "components/ui/button.js", "components/ui/notification.js"],
   "exclude": ["node_modules"]
 }

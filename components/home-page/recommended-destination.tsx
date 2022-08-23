@@ -4,7 +4,7 @@ import { ArrowSmRightIcon } from "@heroicons/react/solid";
 
 import classes from "./recommended-destination.module.css";
 
-function RecommendedDestination() {
+const RecommendedDestination = () => {
   return (
     <section className={classes["recommended-destination"]}>
       <div className={classes["recommended-destination-container"]}>
