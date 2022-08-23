@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import { ArrowSmRightIcon } from '@heroicons/react/solid';
 import classes from './contact-us.module.css';
+import Image from 'next/image';
 
 const ContactUs = () => {
   return (
     <section className={classes['contact-us']}>
-      <img src="/images/newsletter-img-1.png" alt="Newsletter Image" />
+      <Image src="/images/newsletter-img-1.png" alt="Newsletter Image" width={400} height={300} />
       <div className={classes['contact-container']}>
         <h3>Liên hệ ngay và luôn</h3>
         <p>Quý vị hãy để lại thông tin liên lạc để nhận chăm sóc khách hàng</p>

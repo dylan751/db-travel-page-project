@@ -5,7 +5,6 @@
 
 .single-tour-item {
   background-image: url("/images/single-tour-1.jpg");
-  /* height: ; */
   padding: 20rem;
   width: calc(100% - 100px);
   border-radius: 0 0 20px 0;

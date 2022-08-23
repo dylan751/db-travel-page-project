@@ -33,7 +33,6 @@ const TourContent = ({
               width={1200}
               height={400}
             />
-            {/* <img src={tour.image} alt={tour.title} /> */}
           </div>
           <div className={classes['tour-description']}>
             <ul>

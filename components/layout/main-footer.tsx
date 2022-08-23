@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import classes from './main-footer.module.css';
+import Image from 'next/image';
 
 const MainFooter = () => {
   return (
@@ -73,9 +74,9 @@ const MainFooter = () => {
             iure dicta pariatur.
           </p>
           <div className={classes['sponsor-logo']}>
-            <img src="/images/paypal.png" alt="Paypal" />
-            <img src="/images/american-express.png" alt="American Express" />
-            <img src="/images/visa.png" alt="Visa" />
+            <Image src="/images/paypal.png" alt="Paypal" width={90} height={30} />
+            <Image src="/images/american-express.png" alt="American Express" width={90} height={30} />
+            <Image src="/images/visa.png" alt="Visa" width={90} height={30} />
           </div>
         </div>
       </div>

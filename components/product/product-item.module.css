@@ -13,10 +13,6 @@
 .product-item .image:hover {
   cursor: pointer;
 }
-/* 
-.product-item .image img {
-  object-fit: cover;
-} */
 
 .product-item h2 {
   font-size: 1.5rem;

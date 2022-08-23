@@ -24,7 +24,6 @@ const DestinationItem = ({
       <div className={classes['destination-item-container']}>
         <div className={classes['image']}>
           <Image src={image} alt={name} width={550} height={310} />
-          {/* <img src={image} alt={name} /> */}
         </div>
         <div className={classes['content']}>
           <div className={classes['content-container']}>
