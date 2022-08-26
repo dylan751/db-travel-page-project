@@ -19,8 +19,8 @@ function Products(props) {
     <section className={classes["product-section"]}>
       <div className={classes["product-section-header"]}>
         <div>
-          <span>Cửa hàng</span>
-          <h2>Vật Dụng Thiết Yếu</h2>
+          <span>Shopping Center</span>
+          <h2>Must-have Tools</h2>
         </div>
         <div>
           <Button link="/shopping">Cửa Hàng</Button>

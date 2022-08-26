@@ -35,17 +35,29 @@
 }
 
 .services .services-content .services-item {
+  border: 1px solid #dfdfdf;
+  border-radius: 0 15px 0 15px;
   flex: 1;
   text-align: center;
+  padding: 1rem 0;
+}
+
+.services .services-content .services-item:hover {
+  transform: translate(0, -0.5rem);
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
 }
 
 .services .services-content .image-container {
   text-align: center;
-  border: 1px solid #f5f5f5;
   padding: 20px;
   border-radius: 0 15px 0 15px;
   left: 10px;
-  /* cursor: pointer; */
+  cursor: pointer;
+}
+
+.services .services-content .image-container:hover {
+  border: none;
 }
 
 .services .services-content h2 {

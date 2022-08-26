@@ -71,33 +71,33 @@ const ContactForm = () => {
     <form className={classes['contact-form']} onSubmit={submitFormHandler}>
       <div className={classes['contact-form-container']}>
         <div className={classes['contact-header']}>
-          <span>Liên Hệ</span>
-          <h2>Giữ Liên Lạc Nào</h2>
+          <span>Contact Us</span>
+          <h2>Let's Keep In Touch</h2>
         </div>
         <div className={classes['contact-content']}>
           <input
             type="text"
-            placeholder="Họ Và Tên*"
+            placeholder="Name *"
             required
             ref={nameInputRef}
           />
           <input
             type="email"
-            placeholder="Địa Chỉ Email*"
+            placeholder="Email address *"
             required
             ref={emailInputRef}
           />
           <input
             type="number"
-            placeholder="Số Điện Thoại"
+            placeholder="Phone Number"
             ref={phoneInputRef}
           />
-          <input type="text" placeholder="Chủ đề" ref={titleInputRef} />
+          <input type="text" placeholder="Title" ref={titleInputRef} />
           <textarea
-            placeholder="Nhắn nhủ yêu thương..."
+            placeholder="Your Wishes ..."
             ref={descriptionInputRef}
           ></textarea>
-          <button>Gửi Thông Tin</button>
+          <button>Submit Form</button>
         </div>
       </div>
     </form>

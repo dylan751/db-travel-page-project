@@ -29,7 +29,7 @@ const CartBill = () => {
 
   return (
     <div className={classes['cart-bill']}>
-      <div className={classes['cart-bill-header']}>Hóa đơn</div>
+      <div className={classes['cart-bill-header']}>Bills</div>
       <div className={classes['cart-bill-content']}>
         <div className={classes['cart-bill-item-container']}>
           {cart.map((item) => (
@@ -43,7 +43,7 @@ const CartBill = () => {
           ))}
         </div>
         <div className={classes['total-price']}>
-          <p>Tổng tiền</p>
+          <p>Total amount</p>
           <p>
             <i className="fas fa-dollar-sign"></i>
             {totalPrice}
@@ -51,9 +51,7 @@ const CartBill = () => {
         </div>
       </div>
       <Link href="/check-out">
-        <button className={classes['check-out']} onClick={orderSubmitHandler}>
-          Đặt Hàng
-        </button>
+        <button className={classes['check-out']} onClick={orderSubmitHandler}>Process to payment</button>
       </Link>
     </div>
   );

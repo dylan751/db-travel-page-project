@@ -27,7 +27,7 @@ const TourSearch = () => {
 
   return (
     <div className={classes['tour-search']}>
-      <h1>Tìm Tour Cho Bạn</h1>
+      <h1>Find Your Tours</h1>
       <form className={classes['form']} onSubmit={submitHandler}>
         <div className={classes['form-controls']}>
           <div className={classes['form-control']}>

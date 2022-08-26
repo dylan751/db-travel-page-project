@@ -8,8 +8,8 @@ const RecommendedDestination = () => {
   return (
     <section className={classes["recommended-destination"]}>
       <div className={classes["recommended-destination-container"]}>
-        <span>Tất Cả</span>
-        <h2>Địa Điểm Hấp Dẫn</h2>
+        <span>All the</span>
+        <h2>Best destinations</h2>
         <ul className={classes["destination"]}>
           <li>
             <img src="/images/destination/toronto.jpg" alt="Australia" />

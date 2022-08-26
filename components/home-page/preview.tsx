@@ -12,34 +12,31 @@ const Preview = () => {
       <div className={classes['preview-list']}>
         <div className={classes['preview-item']}>
           <MapIcon className={classes['icon']} />
-          <h2>Lựa Chọn Tốt Nhất</h2>
+          <h2>Your best choice</h2>
           <p>
-            Bunichi là 1 trang Web du lịch đã phủ sóng tại hơn 100 quốc gia trên
-            thế giới.
+            Bunichi is a travel website that has been covered in more than 100
+            countries around the world world.
           </p>
         </div>
         <div className={classes['preview-item']}>
           <CurrencyDollarIcon className={classes['icon']} />
-          <h2>Giá Cả Phải Chăng</h2>
+          <h2>Reasonable price</h2>
           <p>
-            Chúng tôi cam kết "Tour của Bunichi rẻ số 2 thì không trang Web nào
-            Chủ Nhật".
+            We promise to offer the best price for your favorite Tours.
           </p>
         </div>
         <div className={classes['preview-item']}>
           <CreditCardIcon className={classes['icon']} />
-          <h2>Thanh Toán An Toàn</h2>
+          <h2>Safe payment</h2>
           <p>
-            Bunichi cung cấp đầy đủ các phương thức thanh toán: Credit card,
-            Paypal, VISA, ...
+            We provide multiple payment methods: Credit Card, Paypal, VISA, ...
           </p>
         </div>
         <div className={classes['preview-item']}>
           <SpeakerphoneIcon className={classes['icon']} />
-          <h2>Hỗ Trợ 24/7</h2>
+          <h2>Support 24/7</h2>
           <p>
-            Du lịch khó? Có Bunichi lo! Đừng ngần ngại liên hệ với chúng tôi để
-            nhận sự hỗ trợ nhé!
+            Find finding tours is hard? We solved that for you! Contact us right away!
           </p>
         </div>
       </div>

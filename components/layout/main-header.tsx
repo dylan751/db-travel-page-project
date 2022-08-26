@@ -9,11 +9,11 @@ import { useRouter } from 'next/router';
 import Menu from './menu';
 
 export const menuItems = [
-  { url: '/', title: 'Trang chủ' },
-  { url: '/tours', title: 'Các Tour' },
-  { url: '/destination', title: 'Địa điểm giải trí' },
-  { url: '/shopping', title: 'Cửa hàng' },
-  { url: '/contact-us', title: 'Liên hệ' },
+  { url: '/', title: 'Homepage' },
+  { url: '/tours', title: 'Tours' },
+  { url: '/destination', title: 'Destinations' },
+  { url: '/shopping', title: 'Shopping Center' },
+  { url: '/contact-us', title: 'Contact Us' },
 ];
 
 const MainHeader = () => {

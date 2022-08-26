@@ -38,11 +38,11 @@ const ProductList = ({ products }: ProductListProps) => {
           className={classes['product-filter-select']}
           ref={productFilterRef}
         >
-          <option value="0">Sắp Xếp Sản Phẩm</option>
-          <option value="high-to-low">Theo Giá Giảm Dần</option>
-          <option value="low-to-high">Theo Giá Tăng Dần</option>
+          <option value="0">Ordered by</option>
+          <option value="high-to-low">Highest price</option>
+          <option value="low-to-high">Lowest price</option>
         </select>
-        <button onClick={sortHandler}>Sắp xếp</button>
+        <button onClick={sortHandler}>Save</button>
       </div>
       <ul className={classes['product-list-item']}>
         {currentProducts.map((product) => (

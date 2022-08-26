@@ -18,8 +18,8 @@ const FeaturedTours = ({ tours }) => {
     <section className={classes['featured-tour']}>
       <div className={classes['featured-tour-header']}>
         <div>
-          <span>Sắp tới</span>
-          <h2>Tour Tuyệt Nhất Trong Năm</h2>
+          <span>Upcoming</span>
+          <h2>The Best Tours Of The Year</h2>
         </div>
         <div>
           <Button link="/tours">Xem tất cả Tour</Button>

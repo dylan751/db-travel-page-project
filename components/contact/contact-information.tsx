@@ -8,18 +8,18 @@ const ContactInformation = () => {
           <div className={classes['contact-information-icon']}>
             <i className="fas fa-map-marker-alt"></i>
           </div>
-          <h5>Trụ Sở Chính</h5>
+          <h5>Location</h5>
           <p>
-            1 Đại Cồ Việt, <br />
-            Đại học Bách Khoa Hà Nội, <br />
-            Việt Nam
+            1 Dai Co Viet Street <br />
+            Hanoi University of Science and Technology <br />
+            Viet Nam
           </p>
         </div>
         <div className={classes['contact-information-item']}>
           <div className={classes['contact-information-icon']}>
             <i className="fas fa-map-marker-alt"></i>
           </div>
-          <h5>Liên Lạc</h5>
+          <h5>Contact Information</h5>
           <p>
             Phone: 033-941-0781 <br />
             Email: bunichi@gmail.com <br />
@@ -30,7 +30,7 @@ const ContactInformation = () => {
           <div className={classes['contact-information-icon']}>
             <i className="fas fa-map-marker-alt"></i>
           </div>
-          <h5>Theo Dõi Trên</h5>
+          <h5>Follow Us On</h5>
           <p>
             Facebook: Bunichi Travel <br />
             Viet Nam

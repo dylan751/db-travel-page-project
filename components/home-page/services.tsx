@@ -7,8 +7,8 @@ const Services = () => {
     <section className={classes['services']}>
       <div className={classes['services-header']}>
         <div>
-          <span>Tất cả</span>
-          <h2>Dịch vụ của chúng tôi</h2>
+          <span>All</span>
+          <h2>Our Services</h2>
         </div>
       </div>
       <div className={classes['services-content']}>
@@ -23,8 +23,8 @@ const Services = () => {
               />
             </div>
           </div>
-          <h2>Dịch vụ thuê xe</h2>
-          <span>100+ Lần Đặt</span>
+          <h2>Car Renting</h2>
+          <span>100+ Rents</span>
         </div>
         <div className={classes['services-item']}>
           <div className={classes['image-container']}>
@@ -38,8 +38,8 @@ const Services = () => {
               />
             </div>
           </div>
-          <h2>Đặt Khách Sạn</h2>
-          <span>78+ Lần Đặt</span>
+          <h2>Hotel Booking</h2>
+          <span>78+ Bookings</span>
         </div>
         <div className={classes['services-item']}>
           <div className={classes['image-container']}>
@@ -53,8 +53,8 @@ const Services = () => {
               />
             </div>
           </div>
-          <h2>Nhà Hàng</h2>
-          <span>50+ Lần Đặt</span>
+          <h2>Restaurant</h2>
+          <span>50+ Reserves</span>
         </div>
         <div className={classes['services-item']}>
           <div className={classes['image-container']}>
@@ -69,7 +69,7 @@ const Services = () => {
             </div>
           </div>
           <h2>Club & Bar</h2>
-          <span>90+ Lần Đặt</span>
+          <span>90+ Guests</span>
         </div>
       </div>
     </section>
