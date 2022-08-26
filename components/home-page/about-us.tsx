@@ -76,10 +76,10 @@ const AboutUs = () => {
             </div>
           </li>
           <li className={classes['review-item']}>
-            <div className={classes['image']}>
+            <div className={classes['image-2']}>
               <Image
-                src="/images/reviewer-hien.jpg"
-                alt="Van Hien"
+                src="/images/reviewer-duong-2.jpg"
+                alt="Hai Duong"
                 width={400}
                 height={340}
               />
