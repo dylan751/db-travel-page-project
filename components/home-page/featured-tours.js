@@ -22,7 +22,7 @@ const FeaturedTours = ({ tours }) => {
           <h2>The Best Tours Of The Year</h2>
         </div>
         <div>
-          <Button link="/tours">Xem tất cả Tour</Button>
+          <Button link="/tours">See All Tours</Button>
         </div>
       </div>
       <Carousel breakPoints={breakPoints} enableAutoPlay autoPlaySpeed={4000}>

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.5",
+    "@stripe/stripe-js": "^1.35.0",
     "axios": "^0.27.2",
     "migrate": "^1.7.0",
     "next": "12",

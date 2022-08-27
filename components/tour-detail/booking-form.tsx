@@ -98,12 +98,12 @@ const BookingForm = ({ tourId }: BookingFormProps) => {
   return (
     <form className={classes['form']} onSubmit={submitFormHandler}>
       <div className={classes['form-controls']}>
-        <h4>Đặt Tour Ngay</h4>
+        <h4>Book Tour</h4>
         <div className={classes['form-control']}>
           <input
             type="text"
             id="name"
-            placeholder="Họ và tên*"
+            placeholder="Name *"
             ref={nameInputRef}
             required
           />
@@ -112,9 +112,7 @@ const BookingForm = ({ tourId }: BookingFormProps) => {
           <input
             type="tel"
             id="phone"
-            placeholder="Số điện thoại*"
-            // minLength={10}
-            // maxLength={11}
+            placeholder="Phone Number *"
             ref={phoneInputRef}
             required
           />
@@ -123,7 +121,7 @@ const BookingForm = ({ tourId }: BookingFormProps) => {
           <input
             type="email"
             id="email"
-            placeholder="Địa chỉ email*"
+            placeholder="Email address *"
             ref={emailInputRef}
             required
           />
@@ -138,13 +136,13 @@ const BookingForm = ({ tourId }: BookingFormProps) => {
           <input
             type="number"
             id="number-of-people"
-            placeholder="Số lượng người*"
+            placeholder="Number Of People *"
             ref={numberOfPeopleRef}
             required
           />
         </div>
         <button>
-          Đặt Tour ngay <ArrowSmRightIcon className="w-6 h-6 inline-block" />
+          Book Now <ArrowSmRightIcon className="w-6 h-6 inline-block" />
         </button>
       </div>
     </form>

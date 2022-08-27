@@ -1,5 +1,6 @@
 .form {
-  background-color: var(--clr_heath);
+  background-color: var(--clr_heath-2);
+  /* background-color: var(--bs-light); */
   /* background-color: #F3C677; */
 }
 

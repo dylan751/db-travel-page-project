@@ -23,7 +23,7 @@ function Products(props) {
           <h2>Must-have Tools</h2>
         </div>
         <div>
-          <Button link="/shopping">Cửa Hàng</Button>
+          <Button link="/shopping">Shopping Center</Button>
         </div>
       </div>
       <Carousel breakPoints={breakPoints}>

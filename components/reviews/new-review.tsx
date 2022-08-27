@@ -61,25 +61,25 @@ const NewReview = ({ tourId }: NewReviewProps) => {
 
   return (
     <div className={classes['new-review']}>
-      <h2>Để lại bình luận</h2>
+      <h2>Leave your comment</h2>
       <form className={classes['new-review-form']} onSubmit={submitNewReview}>
         <div className={classes['new-review-form-controls']}>
           <div className={classes['new-review-form-control']}>
             <input
               type="text"
-              placeholder="Họ và tên*"
+              placeholder="Name *"
               required
               ref={NameInputRef}
             />
             <input
               type="email"
-              placeholder="Địa chỉ email*"
+              placeholder="Email address *"
               required
               ref={EmailInputRef}
             />
           </div>
           <textarea
-            placeholder="Bình luận của bạn..."
+            placeholder="Your comment"
             ref={CommentInputRef}
           ></textarea>
         </div>

@@ -25,7 +25,7 @@ const TourContent = ({
     <div className={classes['tour-content-container']}>
       <div className={classes['tour-content-section']}>
         <div className={classes['tour-content']}>
-          <h2>Tổng quan</h2>
+          <h2>Overview</h2>
           <div className={classes['image']}>
             <Image
               src={tour.image}
@@ -36,17 +36,17 @@ const TourContent = ({
           </div>
           <div className={classes['tour-description']}>
             <ul>
-              <li>Giá: ${tour.price}</li>
-              <li>Khách sạn: {tour.hotel}</li>
-              <li>Kiểu tour: {tour.type}</li>
-              <li>Phương tiện: {tour.vehicle}</li>
-              <li>Số lượng người: {tour.numberOfPeople}</li>
+              <li>Price: ${tour.price}</li>
+              <li>Hotel: {tour.hotel}</li>
+              <li>Tour type: {tour.type}</li>
+              <li>Vehicle: {tour.vehicle}</li>
+              <li>Number of people: {tour.numberOfPeople}</li>
             </ul>
             <p className={classes['tour-preview']}>{tour.description}</p>
           </div>
         </div>
         <div className={classes['destination-detail-list']}>
-          <h2>Lịch Trình Trong Tour</h2>
+          <h2>Tour's detail</h2>
           <DestionDetailList destinations={destinations} />
         </div>
         <ReviewList reviews={reviews} />

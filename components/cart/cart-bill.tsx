@@ -5,6 +5,7 @@ import ShoppingCartContext from '../../store/shopping-cart-context';
 import NotificationContext from '../../store/notification-context';
 import { ReactNode, useContext } from 'react';
 import { useRouter } from 'next/router';
+import { checkout } from '../../services/checkout';
 
 const CartBill = () => {
   const ShoppingCartCtx = useContext(ShoppingCartContext);
@@ -18,13 +19,21 @@ const CartBill = () => {
   const orderSubmitHandler = (event) => {
     event.preventDefault();
 
-    NotificationCtx.showNotification({
-      title: 'Đặt hàng thành công!',
-      message: 'Đã hoàn thành đặt hàng.',
-      status: 'success',
-    });
+    // NotificationCtx.showNotification({
+    //   title: 'Đặt hàng thành công!',
+    //   message: 'Đã hoàn thành đặt hàng.',
+    //   status: 'success',
+    // });
 
-    router.push('/shopping');
+    // Redirect to Stripe
+    checkout({
+      lineItems: [
+        {
+          price: 'price_1LbQSgKuIWZy8vOrI3BJn0bC',
+          quantity: 2,
+        },
+      ],
+    });
   };
 
   return (
@@ -51,7 +60,9 @@ const CartBill = () => {
         </div>
       </div>
       <Link href="/check-out">
-        <button className={classes['check-out']} onClick={orderSubmitHandler}>Process to payment</button>
+        <button className={classes['check-out']} onClick={orderSubmitHandler}>
+          Process to payment
+        </button>
       </Link>
     </div>
   );
