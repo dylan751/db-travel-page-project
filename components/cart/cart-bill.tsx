@@ -3,8 +3,7 @@ import Link from 'next/link';
 
 import ShoppingCartContext from '../../store/shopping-cart-context';
 import NotificationContext from '../../store/notification-context';
-import { ReactNode, useContext } from 'react';
-import { useRouter } from 'next/router';
+import { useContext } from 'react';
 import { checkout } from '../../services/checkout';
 
 const CartBill = () => {
@@ -14,25 +13,17 @@ const CartBill = () => {
   const totalPrice: any = ShoppingCartCtx.totalPrice();
   const { cart } = ShoppingCartCtx;
 
-  const router = useRouter();
-
   const orderSubmitHandler = (event) => {
     event.preventDefault();
 
-    // NotificationCtx.showNotification({
-    //   title: 'Đặt hàng thành công!',
-    //   message: 'Đã hoàn thành đặt hàng.',
-    //   status: 'success',
-    // });
+    const lineItems = [];
+    cart.map((item) =>
+      lineItems.push({ price: item.stripeId, quantity: item.count }),
+    );
 
     // Redirect to Stripe
     checkout({
-      lineItems: [
-        {
-          price: 'price_1LbQSgKuIWZy8vOrI3BJn0bC',
-          quantity: 2,
-        },
-      ],
+      lineItems,
     });
   };
 

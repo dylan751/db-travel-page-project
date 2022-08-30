@@ -7,4 +7,5 @@ export interface Product {
   category: string;
   image: string;
   count: number;
+  stripeId?: string;
 }

@@ -20,7 +20,7 @@ export function ShoppingCartContextProvider(props) {
     if (check) {
       setCart([...cart, { ...product }]);
     } else {
-      alert('Sản phẩm đã được thêm vào giỏ hàng!');
+      alert('The product has been added to the cart!');
     }
   }
 
@@ -43,7 +43,7 @@ export function ShoppingCartContextProvider(props) {
   }
 
   function removeProduct(id) {
-    if (window.confirm('Bạn muốn xóa sản phẩm này?')) {
+    if (window.confirm('Do you want to delete this product?')) {
       cart.forEach((item, index) => {
         if (item.productId === id) {
           cart.splice(index, 1);
