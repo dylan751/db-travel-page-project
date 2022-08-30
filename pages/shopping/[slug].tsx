@@ -1,5 +1,5 @@
-import ShoppingHeader from '../../components/shopping/shopping-header';
-import ShoppingContent from '../../components/shopping/shopping-content';
+import ShoppingHeader from '../../components/Shopping/ShoppingHeader';
+import ShoppingContent from '../../components/Shopping/ShoppingContent';
 import productApi from '../../services/productApi';
 import { GetServerSideProps } from 'next';
 import { Product } from '../../models/Product';

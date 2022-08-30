@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next';
-import TourList from '../../components/tour/tour-list';
-import TourSearch from '../../components/tour/tour-search';
+import TourList from '../../components/Tour/TourList';
+import TourSearch from '../../components/Tour/TourSearch';
 import { Tour } from '../../models/Tour';
 import tourApi from '../../services/tourApi';
 

@@ -1,7 +1,7 @@
-import MainHeader from './main-header';
-import MainFooter from './main-footer';
-import Notification from '../ui/notification';
-import NotificationContext from '../../store/notification-context';
+import MainHeader from './MainHeader';
+import MainFooter from './MainFooter';
+import Notification from '../UI/Notification';
+import NotificationContext from '../../store/NotificationContext';
 import { useContext } from 'react';
 
 const Layout = (props) => {

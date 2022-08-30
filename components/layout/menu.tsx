@@ -1,4 +1,4 @@
-import classes from './menu.module.css';
+import classes from './Menu.module.css';
 import Link from 'next/link';
 
 interface MenuProps {

@@ -15,6 +15,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "store/notification-context.js", "components/home-page/products.js", "components/home-page/featured-tours.js", "components/product/product-list.js", "components/product/product-item.js", "components/ui/button.js", "components/ui/notification.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "store/NotificationContext.js", "components/HomePage/Products.js", "components/HomePage/FeaturedTours.js", "components/Product/ProductList.js", "components/Product/ProductItem.js", "components/UI/Button.js", "components/UI/Notification.js"],
   "exclude": ["node_modules"]
 }

@@ -1,5 +1,5 @@
-import TourHeader from '../../components/tour-detail/tour-header';
-import TourContent from '../../components/tour-detail/tour-content';
+import TourHeader from '../../components/TourDetail/TourHeader';
+import TourContent from '../../components/TourDetail/TourContent';
 import tourApi from '../../services/tourApi';
 import destinationApi from '../../services/destinationApi';
 import reviewApi from '../../services/reviewApi';

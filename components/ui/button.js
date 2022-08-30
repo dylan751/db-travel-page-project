@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import {ArrowSmRightIcon} from '@heroicons/react/solid';
 
-import classes from "./button.module.css";
+import classes from "./Button.module.css";
 
 function Button(props) {
   if (props.link) {

@@ -1,7 +1,7 @@
 import { GetServerSideProps } from 'next';
-import DestinationHeader from '../components/destination/destination-header';
-import DestinationList from '../components/destination/destination-list';
-import ContactUs from '../components/home-page/contact-us';
+import DestinationHeader from '../components/Destination/DestinationHeader';
+import DestinationList from '../components/Destination/DestinationList';
+import ContactUs from '../components/HomePage/ContactUs';
 import { Destination } from '../models/Destination';
 import destinationApi from '../services/destinationApi';
 

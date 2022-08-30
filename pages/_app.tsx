@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Layout from '../components/layout/layout';
-import { NotificationContextProvider } from '../store/notification-context';
-import { ShoppingCartContextProvider } from '../store/shopping-cart-context';
+import Layout from '../components/Layout/Layout';
+import { NotificationContextProvider } from '../store/NotificationContext';
+import { ShoppingCartContextProvider } from '../store/ShoppingCartContext';
 import '../styles/globals.css';
 import NextNProgress from 'nextjs-progressbar';
 import { AppProps } from 'next/app';

@@ -1,6 +1,6 @@
-import ContactForm from '../components/contact/contact-form';
-import ContactHeader from '../components/contact/contact-header';
-import ContactInformation from '../components/contact/contact-information';
+import ContactForm from '../components/Contact/ContactForm';
+import ContactHeader from '../components/Contact/ContactHeader';
+import ContactInformation from '../components/Contact/ContactInformation';
 
 function ContactPage() {
   return (

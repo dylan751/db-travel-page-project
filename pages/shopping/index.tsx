@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next';
-import ShoppingContent from '../../components/shopping/shopping-content';
-import ShoppingHeader from '../../components/shopping/shopping-header';
+import ShoppingContent from '../../components/Shopping/ShoppingContent';
+import ShoppingHeader from '../../components/Shopping/ShoppingHeader';
 import { Product } from '../../models/Product';
 import productApi from '../../services/productApi';
 

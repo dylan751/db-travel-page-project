@@ -2,15 +2,15 @@ import tourApi from '../services/tourApi';
 import productApi from '../services/productApi';
 
 /* COMPONENTS */
-import HeroContent from '../components/hero-content/hero-content';
-import Preview from '../components/home-page/preview';
-import FeaturedTours from '../components/home-page/featured-tours';
-import RecommendedDestination from '../components/home-page/recommended-destination';
-import Services from '../components/home-page/services';
-import AboutUs from '../components/home-page/about-us';
-import ContactUs from '../components/home-page/contact-us';
-import Products from '../components/home-page/products';
-import HeroTour from '../components/home-page/hero-tour';
+import HeroContent from '../components/HeroContent/HeroContent';
+import Preview from '../components/HomePage/Preview';
+import FeaturedTours from '../components/HomePage/FeaturedTours';
+import RecommendedDestination from '../components/HomePage/RecommendedDestination';
+import Services from '../components/HomePage/Services';
+import AboutUs from '../components/HomePage/AboutUs';
+import ContactUs from '../components/HomePage/ContactUs';
+import Products from '../components/HomePage/Products';
+import HeroTour from '../components/HomePage/HeroTour';
 import { GetServerSideProps } from 'next';
 import { Tour } from '../models/Tour';
 import { Product } from '../models/Product';
