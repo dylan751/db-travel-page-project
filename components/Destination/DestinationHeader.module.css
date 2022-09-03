@@ -1,6 +1,7 @@
 .destination-header {
   font-family: var(--secondary_font);
-  background-image: url("../../public/images/hero-image/hero-image-5.jpg");
+  /* background-image: url("../../public/images/hero-image/hero-image-5.jpg"); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("/images/hero-image/hero-image-5.jpg");
   background-size: cover;
   background-position: center;
   display: block;

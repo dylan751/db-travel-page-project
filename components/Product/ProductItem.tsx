@@ -45,7 +45,7 @@ const ProductItem = ({
         <p>Hiện còn: {quantity}</p>
       </div>
       <p className={classes['product-description']}>{description}</p>
-      <button onClick={onSubmitHandler}>Cho vào giỏ hàng</button>
+      <button onClick={onSubmitHandler}>Add to cart</button>
     </li>
   );
 };

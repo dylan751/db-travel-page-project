@@ -1,6 +1,7 @@
 .tour-search {
   font-family: var(--secondary_font);
-  background-image: url("../../public/images/hero-image/hero-image-4.jpg");
+  /* background-image: url('../../public/images/hero-image/hero-image-4.jpg'); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("/images/hero-image/hero-image-4.jpg");
   background-size: cover;
   background-position: center;
   display: block;
@@ -12,12 +13,13 @@
 }
 
 .tour-search h1 {
-  font-size: 3.125rem;  
+  font-size: 3.125rem;
   line-height: 1.2;
   font-weight: 700;
   margin: 0;
-  margin-bottom: 100px;
+  margin-bottom: 4rem;
   text-align: center;
+  color: #fff;
 }
 
 .form {
@@ -42,23 +44,33 @@
 
 .form .form-control select {
   width: 100%;
-  padding: 16px;
+  padding: 0.75rem 0rem 0.75rem 0.75rem;
   border: 1px solid rgb(213, 213, 213);
+  border-top: none;
+  border-bottom: none;
   border-right: none;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 1rem;
   background-color: var(--clr_white);
+  color: rgba(0, 0, 0, 0.5);
+
+  /* for Chrome */
+  -webkit-appearance: none;
 }
 
-.form .form-control option {
+.form .form-control select:focus {
+  border: none;
+}
+
+.form .form-control select option {
   font-family: inherit;
 }
 
 .form button {
   display: inline-block;
-  height: 53px;
+  height: 3rem;
   margin: 0;
-  padding: 0 30px;
+  padding: 0 0.75rem;
   width: 210px;
   border: none;
   cursor: pointer;
@@ -66,6 +78,8 @@
   color: var(--clr_white);
   font-family: inherit;
   font-size: inherit;
+  font-weight: 600;
+  border-radius: 0px 4px 4px 0px;
 }
 
 @media screen and (max-width: 1024px) {

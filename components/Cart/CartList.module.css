@@ -1,7 +1,6 @@
 .cart-list {
   display: grid;
   grid-template-columns: 1fr;
-  /* width: 60%; */
   margin: 0 auto;
   font-family: var(--secondary_font);
   color: var(--clr_scorpion);

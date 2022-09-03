@@ -31,11 +31,11 @@ const CartList = () => {
     <>
       <ul className={classes['cart-list']}>
         <li className={classes['cart-list-header']}>
-          <p className={classes['cart-list-header__product']}>Sản Phẩm</p>
-          <p>Đơn giá</p>
-          <p>Số lượng</p>
-          <p>Tổng tiền</p>
-          <p>Xóa</p>
+          <p className={classes['cart-list-header__product']}>Products</p>
+          <p>Unit Price</p>
+          <p>Quantity</p>
+          <p>Total amount</p>
+          <p>Remove</p>
         </li>
         {cartItems.map((cart) => (
           <CartItem

@@ -5,7 +5,7 @@ const HeroContent = () => {
     <div className={classes["hero-image"]}>
       <div className={classes["hero-text"]}>
         <span>Welcome to Bunichi</span>
-        <h1>Discover beautiful places</h1>
+        <h1>Let's Explore Your Awesome City</h1>
       </div>
     </div>
   );

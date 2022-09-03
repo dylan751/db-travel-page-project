@@ -2,6 +2,7 @@ import classes from './TourSearch.module.css';
 
 import { useRef } from 'react';
 import { useRouter } from 'next/router';
+import { ArrowDownIcon } from '@heroicons/react/solid';
 
 const TourSearch = () => {
   const router = useRouter();
@@ -32,7 +33,7 @@ const TourSearch = () => {
         <div className={classes['form-controls']}>
           <div className={classes['form-control']}>
             <select id="price" ref={priceRef}>
-              <option value="0">Giá</option>
+              <option value="0">Price</option>
               <option value="1">1 - 400</option>
               <option value="401">401 - 800</option>
               <option value="801">801 - 1200</option>
@@ -41,7 +42,7 @@ const TourSearch = () => {
           </div>
           <div className={classes['form-control']}>
             <select id="star" ref={starRef}>
-              <option value="0">Số sao</option>
+              <option value="0">Rating</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -51,7 +52,7 @@ const TourSearch = () => {
           </div>
           <div className={classes['form-control']}>
             <select id="vehicle" ref={vehicleRef}>
-              <option value="0">Phương tiện</option>
+              <option value="0">Vehicle</option>
               <option value="Máy bay">Máy bay</option>
               <option value="Tàu hỏa">Tàu hỏa</option>
               <option value="Tàu thủy">Tàu thủy</option>
@@ -60,14 +61,14 @@ const TourSearch = () => {
           </div>
           <div className={classes['form-control']}>
             <select id="tour-type" ref={tourTypeRef}>
-              <option value="0">Kiểu Tour</option>
+              <option value="0">Tour types</option>
               <option value="Trong nước">Trong nước</option>
               <option value="Nước ngoài">Nước ngoài</option>
             </select>
           </div>
           <div className={classes['form-control']}>
             <select id="number-of-people" ref={numberOfPeopleRef}>
-              <option value="0">Số lượng người</option>
+              <option value="0">Number of people</option>
               <option value="1-4">1 - 4</option>
               <option value="5-8">5 - 8</option>
               <option value="9-12">9 - 12</option>
@@ -79,6 +80,6 @@ const TourSearch = () => {
       </form>
     </div>
   );
-}
+};
 
 export default TourSearch;

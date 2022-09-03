@@ -1,6 +1,5 @@
 .cart-bill {
   font-family: var(--secondary_font);
-  /* width: 30%; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;

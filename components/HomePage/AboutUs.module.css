@@ -6,6 +6,9 @@
   margin: 0 auto;
   gap: 70px;
   font-family: var(--secondary_font);
+  width: 100%;
+  background: linear-gradient(to right, var(--clr_minsk), var(--clr_jaffa));
+  padding: 100px;
 }
 
 .about {
@@ -22,6 +25,7 @@
   line-height: 26px;
   color: var(--clr_scorpion);
   font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .about-us .header {
@@ -41,20 +45,22 @@
 }
 
 .about-us .header h2 {
-  color: var(--clr_thunder);
+  /* color: var(--clr_thunder); */
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.4;
   margin: 0;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .about-us .content h4 {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--clr_thunder);
+  /* color: var(--clr_thunder); */
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .about-us .content li {
@@ -82,8 +88,6 @@
 .review-item {
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--clr_grey);
-  border-radius: 20px 0;
 }
 
 .image img {
@@ -91,7 +95,7 @@
   object-position: center;
   width: 100%;
   height: 280px;
-  border-radius: 20px 0 0 0;
+  /* border-radius: 20px 0 0 0; */
 }
 
 .image-2 img {
@@ -99,20 +103,22 @@
   object-position: top;
   width: 100%;
   height: 280px;
-  border-radius: 20px 0 0 0;
+  /* border-radius: 20px 0 0 0; */
 }
 
 .review-item .review-content {
   padding: 25px;
+  border: 1px solid var(--clr_grey);
 }
 
 .review-item .review-content h5 {
   margin: 0;
-  color: var(--clr_thunder);
+  /* color: var(--clr_thunder); */
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.1;
   margin: 0 0 8px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .review-item .review-content p {
@@ -120,8 +126,9 @@
   margin-bottom: 10px;
   font-size: 1rem;
   line-height: 26px;
-  color: var(--clr_scorpion);
+  /* color: var(--clr_scorpion); */
   font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 @media screen and (max-width: 1024px) {
@@ -144,7 +151,7 @@
     font-size: 1.5rem;
     line-height: 1.1;
   }
-  
+
   .review-item .review-content p {
     font-size: 0.75rem;
     line-height: 1.6;
@@ -179,7 +186,7 @@
     font-size: 1.5rem;
     line-height: 1.1;
   }
-  
+
   .review-item .review-content p {
     font-size: 0.75rem;
     line-height: 1.6;

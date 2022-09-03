@@ -36,6 +36,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
+  --bs-main: #f0f4f7;
 }
 
 html,
@@ -43,8 +44,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--primary_font);
-  /* color: var(--clr_scorpion); */
-  /* overflow: scroll; */
+  background: var(--bs-main);
 }
 
 ul {
