@@ -4,7 +4,7 @@ import {ArrowSmRightIcon} from '@heroicons/react/solid';
 
 import classes from "./Button.module.css";
 
-function Button(props) {
+const Button = (props) => {
   if (props.link) {
     return (
       <Link href={props.link}>
