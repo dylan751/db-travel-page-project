@@ -39,6 +39,9 @@
 }
 
 .preview-item h2 {
+  background: linear-gradient(to right, var(--clr_jaffa), var(--clr_minsk));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 700;
   margin: 10px 0;
   font-size: 1.25rem;

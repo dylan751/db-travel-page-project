@@ -21,11 +21,14 @@
 }
 
 .services .services-header h2 {
-  font-size: 35px;
+  background: linear-gradient(to right, var(--clr_jaffa), var(--clr_minsk));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 700;
+  margin: 10px 0;
+  font-size: 2.5rem;
   line-height: 1.4;
   margin: 0;
-  color: var(--clr_thunder);
 }
 
 .services .services-content {

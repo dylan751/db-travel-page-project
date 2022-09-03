@@ -41,10 +41,10 @@
 }
 
 .single-tour-header {
-  color: var(--clr_white);
+  color: var(--clr_jaffa);
   font-weight: 700;
-  font-size: 1.5rem;
   margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 1024px) {

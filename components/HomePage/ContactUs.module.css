@@ -32,8 +32,7 @@
 }
 
 .contact-us .contact-container a {
-  background-color: var(--clr_jaffa);
-  border: 1px solid transparent;
+  background: linear-gradient(to right, var(--clr_jaffa), var(--clr_minsk));
   padding: 0.75rem 1rem;
   width: 100%;
   text-align: center;
@@ -43,6 +42,11 @@
   font-family: inherit;
   border-radius: 0 0 20px 0;
   cursor: pointer;
+  transition: 1s;
+}
+
+.contact-us .contact-container a:hover {
+  background: linear-gradient(to right, var(--clr_minsk), var(--clr_jaffa));
 }
 
 @media screen and (max-width: 1024px) {
@@ -68,7 +72,7 @@
     padding: 50px;
   }
   .contact-us .contact-container {
-      margin-top: 40px;
+    margin-top: 40px;
     width: 100%;
   }
   .contact-us .contact-container p {
