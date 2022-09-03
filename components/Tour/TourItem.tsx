@@ -41,7 +41,7 @@ const TourItem = ({
   return (
     <li className={classes.item}>
       <div className={classes.image}>
-        <Image src={image} alt={title} width={500} height={300} />
+        <Image src={image} alt={title} width={450} height={350} />
       </div>
       <div className={classes.content}>
         <div className={classes['content-header']}>

@@ -3,9 +3,9 @@
   display: block;
   position: relative;
   top: 4rem;
-  /* width: 90%; */
   margin: 0 auto;
-  background-color: #f9f9f9;
+  background: linear-gradient(to right, var(--clr_jaffa), var(--clr_minsk));
+  color: #fff;
   padding-top: 100px;
 }
 

@@ -21,7 +21,6 @@
   font-size: 2rem;
   line-height: 1.1;
   font-weight: 700;
-  /* width: 70%; */
   margin: 0 0 0.5rem 0;
 }
 
@@ -49,7 +48,6 @@
 @media screen and (max-width: 1024px) {
   .contact-us .contact-container h3 {
     font-size: 1.5rem;
-    /* width: 70%; */
   }
   .contact-us .contact-container p {
     font-size: 0.75rem;
@@ -64,7 +62,6 @@
 @media screen and (max-width: 768px) {
   .contact-us .contact-container h3 {
     font-size: 1.75rem;
-    /* width: 70%; */
   }
   .contact-us {
     flex-direction: column;

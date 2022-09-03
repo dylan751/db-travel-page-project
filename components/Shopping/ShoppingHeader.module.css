@@ -1,6 +1,7 @@
 .shopping-header {
   font-family: var(--secondary_font);
-  background-image: url("../../public/images/hero-image/hero-image-3.jpg");
+  background: linear-gradient(to right, var(--clr_jaffa), var(--clr_minsk));
+  color: #fff;
   background-size: cover;
   display: block;
   position: relative;
