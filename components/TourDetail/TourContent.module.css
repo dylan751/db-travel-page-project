@@ -9,13 +9,14 @@
 
 .tour-content-section {
   flex: 5;
+  background-color: #fff;
+  padding: 1rem;
 }
 
 .tour-content {
   border: 1px solid #ddd;
   padding: 30px;
   margin: 0 0 25px;
-  /* color: var(--clr_scorpion); */
   font-size: 1rem;
   line-height: 26px;
 }

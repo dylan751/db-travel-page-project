@@ -27,12 +27,10 @@
 }
 
 .cart-item .count-item {
-  /* text-align: center; */
   display: flex;
 }
 
 .cart-item .count-item button.btn {
-  /* height: 40px; */
   width: 40px;
   border: 1px solid var(--clr_grey);
   cursor: pointer;

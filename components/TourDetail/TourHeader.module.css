@@ -2,19 +2,22 @@
   font-family: var(--secondary_font);
   display: block;
   position: relative;
-  top: 4rem;
   margin: 0 auto;
-  background-color: #f9f9f9;
+  background: linear-gradient(to right, var(--clr_jaffa), var(--clr_minsk));
+  height: 40vh;
   padding-top: 100px;
+  margin-bottom: 4rem;
   color: var(--clr_jaffa);
 }
 
 .tour-header h1 {
-  font-size: 3.125rem;
-  line-height: 1.2;
-  font-weight: 700;
-  margin: 0;
-  padding-bottom: 100px;
-  margin-bottom: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  font-size: 4.25rem;
+  font-weight: 600;
+  color: #fff;
+  font-family: var(--secondary_font);
   text-align: center;
 }
