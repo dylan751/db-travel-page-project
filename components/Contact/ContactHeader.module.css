@@ -4,23 +4,22 @@
   background-size: cover;
   background-position: center;
   display: block;
+  height: 100vh;
   position: relative;
-  top: 4rem;
-  /* width: 90%; */
   margin: 0 auto;
   background-color: #f9f9f9;
-  /* padding-top: 100px; */
 }
 
 .contact-us-header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%);
   font-size: 3.125rem;
-  line-height: 1.2;
   font-weight: 700;
-  margin: 0;
-  padding: 150px 0;
-  margin-bottom: 150px;
+  color: #fff;
+  font-family: var(--secondary_font);
   text-align: center;
-  color: var(--clr_white);
 }
 
 @media screen and (max-width: 768px) {

@@ -1,5 +1,5 @@
 .tour-search {
-  top: 4rem;
+  /* top: 4rem; */
   font-family: var(--secondary_font);
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("/images/hero-image/hero-image-7.jpg");
   height: 100vh;

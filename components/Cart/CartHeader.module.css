@@ -2,19 +2,22 @@
   font-family: var(--secondary_font);
   display: block;
   position: relative;
-  top: 4rem;
   margin: 0 auto;
+  height: 40vh;
   background: linear-gradient(to right, var(--clr_jaffa), var(--clr_minsk));
   color: #fff;
   padding-top: 100px;
+  margin-bottom: 4rem;
 }
 
 .cart-header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%);
   font-size: 3.125rem;
-  line-height: 1.2;
   font-weight: 700;
-  margin: 0;
-  padding-bottom: 100px;
-  margin-bottom: 150px;
+  color: #fff;
+  font-family: var(--secondary_font);
   text-align: center;
 }

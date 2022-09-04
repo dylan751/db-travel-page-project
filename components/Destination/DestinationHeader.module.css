@@ -1,26 +1,23 @@
 .destination-header {
   font-family: var(--secondary_font);
-  /* background-image: url("../../public/images/hero-image/hero-image-5.jpg"); */
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("/images/hero-image/hero-image-5.jpg");
   background-size: cover;
   background-position: center;
   display: block;
   position: relative;
-  top: 4rem;
-  /* width: 90%; */
-  margin: 0 auto;
+  height: 100vh;
   background-color: #f9f9f9;
-  /* padding-top: 100px; */
+  margin-bottom: 4rem;
 }
 
 .destination-header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%);
   font-size: 3.125rem;
-  line-height: 1.2;
   font-weight: 700;
-  margin: 0;
-  /* padding-bottom: 100px; */
-  padding: 150px 0;
-  margin-bottom: 150px;
+  color: #fff;
+  font-family: var(--secondary_font);
   text-align: center;
-  color: var(--clr_white);
 }

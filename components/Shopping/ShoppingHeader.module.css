@@ -5,18 +5,21 @@
   background-size: cover;
   display: block;
   position: relative;
-  top: 4rem;
+  height: 50vh;
   margin: 0 auto;
+  margin-bottom: 4rem;
   background-color: #f9f9f9;
 }
 
 .shopping-header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%);
   font-size: 3.125rem;
-  line-height: 1.2;
   font-weight: 700;
-  margin: 0;
-  padding: 150px;
-  margin-bottom: 150px;
+  color: #fff;
+  font-family: var(--secondary_font);
   text-align: center;
 }
 
