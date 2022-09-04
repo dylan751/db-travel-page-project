@@ -2,6 +2,7 @@
   /* top: 4rem; */
   font-family: var(--secondary_font);
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("/images/hero-image/hero-image-7.jpg");
+  background-attachment: fixed;
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -14,8 +15,8 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -65%);
-  font-size: 3.125rem;
-  font-weight: 700;
+  font-size: 4.25rem;
+  font-weight: 600;
   margin-bottom: 4rem;
   color: #fff;
   font-family: var(--secondary_font);

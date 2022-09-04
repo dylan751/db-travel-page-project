@@ -1,6 +1,7 @@
 .hero-image {
   /* top: 4rem; */
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("/images/hero-image/hero-image-6.jpg");
+  background-attachment: fixed;
   height: 100vh;
   min-height: 700px;
   width: 100%;

@@ -3,7 +3,7 @@ import classes from "./DestinationHeader.module.css";
 const DestinationHeader = () => {
   return (
     <div className={classes["destination-header"]}>
-      <h1>Must Go Destinations</h1>
+      <h1>Destinations You Should Visit</h1>
     </div>
   );
 }

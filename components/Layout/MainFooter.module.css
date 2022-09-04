@@ -1,6 +1,7 @@
 .footer {
   margin-top: 100px;
-  background-color: #f9f9f9;
+  /* background: #f9f9f9; */
+  background: #10151c;
 }
 
 .footer .footer-container {
@@ -17,7 +18,7 @@
 .footer .footer-item h4 {
   line-height: 1.4;
   margin: 0 0 20px;
-  color: var(--clr_thunder);
+  color: rgba(255, 255, 255, 0.8);
   font-weight: 700;
   font-size: 1.5rem;
 }
@@ -28,13 +29,19 @@
 }
 
 .footer .footer-link .link {
-  color: var(--clr_scorpion);
+  color: rgba(255, 255, 255, 0.6);
   padding-bottom: 10px;
   font-weight: 400;
 }
 
+.footer .footer-link .link:hover {
+  background: linear-gradient(to right, var(--clr_jaffa), var(--clr_minsk));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .footer .footer-item p {
-  color: var(--clr_scorpion);
+  color: rgba(255, 255, 255, 0.6);
   padding-bottom: 10px;
   font-weight: 400;
   margin: 0;

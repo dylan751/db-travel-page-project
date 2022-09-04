@@ -3,6 +3,7 @@
     margin: 0 auto;
     display: flex;
     gap: 2rem;
+    min-height: 50vh;
 }
 
 .cart-content__list {
