@@ -13,7 +13,6 @@ yarn dev
 Database host at: remotemysql.com
 
 .env file:
-
 ```bash
 MYSQL_HOST=remotemysql.com
 MYSQL_DATABASE=eNJFPV3wNr
